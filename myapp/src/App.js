@@ -2,23 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const data = [  "Tom Cruise",  "Keerthi Suresh",  "Guru Randhawa",  "Pranjal Dahiya" ];
+  const movies = [ "Miss India", "Googly", "Harry Potter Series", "Mission Impossible Series"];
   return (
-    <div>
-     <h1>My Favourite</h1>
-    <ul>
-      <li>Actor - Tom Cruise</li>
-      <li>Actress - Keerthi Suresh</li>
-      <li>Singer - Guru Randhawa</li>
-      <li>Dancer - Pranjal Dahiya </li>
-    </ul>
+    <div >
 
-     <h1>My Favourite Movies</h1>
-      <ul>
-      <li>Brahmastra</li>
-      <li>Miss India</li>
-      <li>Googly</li>
-      <li>Mission Impossible : the rogue nation</li>
-    </ul>
+      <div className='fav'>
+        <h1>My Favourite Stars</h1>
+        <ul>
+           {data.map((el)=>{
+             return <li>{el}</li>
+           })}
+        </ul>
+      </div>
+
+
+      <div className='fav'>
+        <h1>My favourite movies is : </h1>
+        <ul>
+          {movies.map((el) => {
+            return <li>{el}</li>
+          }
+          )}
+        </ul>
+
+
+      </div>
     </div>
   );
 }
