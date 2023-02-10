@@ -1,1 +1,1 @@
-# Learning React ,  redux
+#  React, Redux, Fronted
