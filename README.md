@@ -1,1 +1,1 @@
-#  React, Redux, Fronted
+#  React, Redux
