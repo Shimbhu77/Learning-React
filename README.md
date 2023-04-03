@@ -1,1 +1,2 @@
-# Learning React 
+#  React, Redux Backend
+# fronted , Angular, Vue
