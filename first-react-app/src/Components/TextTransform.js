@@ -25,6 +25,19 @@ export default function TextTransform(props) {
         // console.log("inside onClick fun " + text);
         setText(text.split("").reverse().join(""));
     }
+
+    const handleCopy = ()=>
+    {
+        var text = document.getElementById("myBox");
+        text.select();
+        navigator.clipboard.writeText(text.value);
+    }
+
+    const handleExtraSpaces = ()=>
+    {
+        var newText = text.split(/[ ]+/) ;
+        setText(newText.join(" "));
+    }
     const handleOnChange = (event)=>
     {
         // console.log("inside onChange ");
@@ -34,23 +47,27 @@ export default function TextTransform(props) {
   return (
  
     <>
-        <div className='container'>
+        
+        <div className='container' style={ {color: props.mode==='light'?'black':'white'}}>
             <div className='mb-3'>
             <h1>{props.heading} </h1>
-            <textarea className='form-control' value={text} onChange={handleOnChange}  id="myBox" rows="8"/> 
+            <textarea className='form-control' value={text} onChange={handleOnChange} style={ {backgroundColor: props.mode==='light'?'white':'#2c4646',color: props.mode==='light'?'black':'white'}} id="myBox" rows="8"/> 
             <button className="btn btn-primary mx-0 my-4" onClick={handleOnClick} >Convert Uppercase </button>
             <button className="btn btn-primary mx-2 my-4" onClick={handleOnClicklower} >Convert Lowercase </button>
             <button className="btn btn-primary mx-2 my-4" onClick={handleOnClickClear} >Clear Text </button>
             <button className="btn btn-primary mx-2 my-4" onClick={handleOnClickReverse} >Reverse Text </button>
+            <button className="btn btn-primary mx-2 my-4" onClick={handleCopy} >Copy Text </button>
+            <button className="btn btn-primary mx-2 my-4" onClick={handleExtraSpaces} >Remove Extra Spaces </button>
             </div>
         </div>
 
-        <div className='container my-3'>
+        <div className='container my-3' style={ {color: props.mode==='light'?'black':'white'}}>
             <h1>Summery of Text</h1>
-            <p>total words is {text.split(" ").length} and total characters is {text.length}.</p>
-            <p>average time to read the text is {0.008*text.split(" ").length} minutes.</p>
+            <p>total words is {text.length==0 ? 0 :text.split(" ").length} and total characters is {text.length}.</p>
+            {/* <p>total words is {text.split(" ").length} and total characters is {text.length}.</p> */}
+            <p>average time to read the text is {0.008* (text.length==0 ? 0 :text.split(" ").length) } minutes.</p>
             <h2>Preview</h2>
-            <p>{text}</p>
+            <p>{text.length>0 ? text : "Enter something to preview"}</p>
         </div>
     </>
 

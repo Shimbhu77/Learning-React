@@ -3,13 +3,13 @@ import React,{useState} from 'react'
 export default function About() {
 
    
-   const {myStyle,setMyStyle} = useState({
+   const [myStyle,setMyStyle] = useState({
       color: 'black',
       backgroundColor:'white'
-   })
+   });
 
    console.log(myStyle);
-   const {btnText,setBtnText} =useState("Enable dark mode");
+   const [btnText,setBtnText] =useState("Enable dark mode");
 
    const changeMode = ()=>
    {
@@ -76,7 +76,7 @@ export default function About() {
           </div>
         </div>
       </div>
-        <button type="button" className="btn btn-primary" onClick={changeMode}>{btnText} Enable</button>
+        <button type="button" className="btn btn-primary my-4" onClick={changeMode}>{btnText}</button>
     </div>
   )
 }
