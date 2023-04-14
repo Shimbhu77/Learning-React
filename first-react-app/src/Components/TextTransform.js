@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 export default function TextTransform(props) {
 
     const [text, setText] = useState("");
+    
     const handleOnClick = ()=>
     {
         // console.log("inside onClick fun " + text);
