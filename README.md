@@ -1,2 +1,2 @@
-#  React, Redux,Express, Node js Backend
+#  React, Redux,Express, Node js, mongo db Backend
 # fronted , Angular, Vue
