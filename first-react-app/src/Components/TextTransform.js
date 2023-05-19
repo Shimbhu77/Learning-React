@@ -8,23 +8,27 @@ export default function TextTransform(props) {
     {
         // console.log("inside onClick fun " + text);
         setText(text.toUpperCase());
+        props.showAlert("Converted to UpperCase ","success");
     }
     const handleOnClicklower = ()=>
     {
         // console.log("inside onClick fun " + text);
         setText(text.toLowerCase());
+        props.showAlert("Converted to LowerCase ","success");
     }
 
     const handleOnClickClear = ()=>
     {
         // console.log("inside onClick fun " + text);
         setText("");
+        props.showAlert(" Text Cleard ","success");
     }
 
     const handleOnClickReverse = ()=>
     {
         // console.log("inside onClick fun " + text);
         setText(text.split("").reverse().join(""));
+        props.showAlert(" Text Reversed ","success");
     }
 
     const handleCopy = ()=>
@@ -32,12 +36,14 @@ export default function TextTransform(props) {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert(" Text Copied to ClipBoard ","success");
     }
 
     const handleExtraSpaces = ()=>
     {
         var newText = text.split(/[ ]+/) ;
         setText(newText.join(" "));
+        props.showAlert(" Text Extra Spaces Removed ","success");
     }
     const handleOnChange = (event)=>
     {
