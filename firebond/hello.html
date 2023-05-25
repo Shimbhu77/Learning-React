@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Arguments</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .select-reset {
+            margin-right: 10px;
+        }
+        .border-button{
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <form class="row g-3">
+        <div class="col-auto">
+            <button type="button" class="btn btn-light border-button">My Arg</button>
+        </div>
+        <div class="col-auto">
+            <select class="form-select" aria-label="Default select example">
+                <option value="false">false</option>
+                <option value="true">true</option>
+            </select>
+        </div>
+
+        <div >
+            <button type="button" class="btn btn-light border-button" id="add_arg" onclick="add_argument()">+ add arg</button>
+        </div>
+
+        <div class="container">
+            <div class="select-reset">
+                <select class="form-select" aria-label="Default select example" id="main-select" onchange="handleMainSelect()">
+                    <option value="select_default">select...</option>
+                    <option value="constant">constant</option>
+                    <option value="arg">argument</option>
+                    <option value="and">and</option>
+                    <option value="or">or</option>
+                </select>
+            </div>
+            <button onclick="resetSelect()">✕</button>
+        </div>
+
+        <div id="dynamic-fields-container">
+        </div>
+
+    </form>
+
+    <script>
+        const argumentData = []; // Store created argument values
+
+        function resetSelect() {
+            const selectElement = document.querySelector(".form-select");
+            selectElement.selectedIndex = 0;
+        }
+
+        function add_argument() {
+            const value = document.querySelector("#add_arg");
+
+            // Create a new div element
+            const newArgument = document.createElement("div");
+
+            // Create input element with value "my arg"
+            const argInput = document.createElement("input");
+            argInput.type = "text";
+            argInput.value = "my arg";
+            argInput.classList.add("arg-input");
+            newArgument.appendChild(argInput);
+
+            // Create select element with options "false" and "true"
+            const argSelect = document.createElement("select");
+            argSelect.classList.add("arg-select");
+            
+            const optionFalse = document.createElement("option");
+            optionFalse.value = "false";
+            optionFalse.textContent = "false";
+            argSelect.appendChild(optionFalse);
+            
+            const optionTrue = document.createElement("option");
+            optionTrue.value = "true";
+            optionTrue.textContent = "true";
+            argSelect.appendChild(optionTrue);
+
+            newArgument.appendChild(argSelect);
+
+            // Insert the new argument above the add-arg-button
+            const dynamicFieldsContainer = document.getElementById("dynamic-fields-container");
+            dynamicFieldsContainer.appendChild(newArgument);
+
+            // Store argument value
+            argumentData.push("my arg");
+        }
+
+        function handleMainSelect() {
+            const mainSelect = document.getElementById("main-select");
+            const selectedValue = mainSelect.value;
+
+            if (selectedValue === "constant") {
+                createConstantFields();
+            } else if (selectedValue === "arg") {
+                createArgumentFields();
+            } else if (selectedValue === "and") {
+                createAndFields();
+            }
+        }
+
+        function createConstantFields() {
+            // Create a new div element
+            const constantFields = document.createElement("div");
+            constantFields.classList.add("container");
+
+            // Create select element with options "false" and "true"
+            const constantSelect = document.createElement("select");
+            constantSelect.classList.add("form-select");
+
+            const optionSelect = document.createElement("option");
+            optionSelect.value = "select_default";
+            optionSelect.textContent = "select...";
+            constantSelect.appendChild(optionSelect);
+
+            const optionFalse = document.createElement("option");
+            optionFalse.value = "false";
+            optionFalse.textContent = "false";
+            constantSelect.appendChild(optionFalse);
+            
+            const optionTrue = document.createElement("option");
+            optionTrue.value = "true";
+            optionTrue.textContent = "true";
+            constantSelect.appendChild(optionTrue);
+
+            constantFields.appendChild(constantSelect);
+
+            const dynamicFieldsContainer = document.getElementById("dynamic-fields-container");
+            dynamicFieldsContainer.appendChild(constantFields);
+        }
+
+        function createArgumentFields() {
+            // Create a new div element
+            const argumentFields = document.createElement("div");
+            argumentFields.classList.add("container");
+
+            // Create select element with stored argument values
+            const argumentSelect = document.createElement("select");
+            argumentSelect.classList.add("form-select");
+
+            const optionSelect = document.createElement("option");
+            optionSelect.value = "select_default";
+            optionSelect.textContent = "select...";
+            argumentSelect.appendChild(optionSelect);
+
+            for (const argValue of argumentData) {
+                const optionArg = document.createElement("option");
+                optionArg.value = argValue;
+                optionArg.textContent = argValue;
+                argumentSelect.appendChild(optionArg);
+            }
+
+            argumentFields.appendChild(argumentSelect);
+
+            const dynamicFieldsContainer = document.getElementById("dynamic-fields-container");
+            dynamicFieldsContainer.appendChild(argumentFields);
+        }
+
+        function createAndFields() {
+            // Create a new div element
+            const andFields = document.createElement("div");
+            andFields.classList.add("container");
+
+            // Create select element with options "false" and "true"
+            const select1 = document.createElement("select");
+            select1.classList.add("form-select");
+
+            // const optionSelect1 = document.createElement("option");
+            // optionSelect1.value = "select_default";
+            // optionSelect1.textContent = "select...";
+            // select1.appendChild(optionSelect1);
+
+            const optionFalse1 = document.createElement("option");
+            optionFalse1.value = "false";
+            optionFalse1.textContent = "false";
+            select1.appendChild(optionFalse1);
+            
+            const optionTrue1 = document.createElement("option");
+            optionTrue1.value = "true";
+            optionTrue1.textContent = "true";
+            select1.appendChild(optionTrue1);
+
+            andFields.appendChild(select1);
+
+            // Create select element with options "false" and "true"
+            const select2 = document.createElement("select");
+            select2.classList.add("form-select");
+
+            // const optionSelect2 = document.createElement("option");
+            // optionSelect2.value = "select_default";
+            // optionSelect2.textContent = "select...";
+            // select2.appendChild(optionSelect2);
+
+            const optionFalse2 = document.createElement("option");
+            optionFalse2.value = "false";
+            optionFalse2.textContent = "false";
+            select2.appendChild(optionFalse2);
+            
+            const optionTrue2 = document.createElement("option");
+            optionTrue2.value = "true";
+            optionTrue2.textContent = "true";
+            select2.appendChild(optionTrue2);
+
+            andFields.appendChild(select2);
+
+            const dynamicFieldsContainer = document.getElementById("dynamic-fields-container");
+            dynamicFieldsContainer.appendChild(andFields);
+        }
+    </script>
+</body>
+</html>
