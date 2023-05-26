@@ -4,59 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <style>
-        .container {
-            display: flex;
-            align-items: center;
-        }
-
-        .select-reset {
-            margin-right: 10px;
-        }
-        .border-button{
-            border: 1px solid grey;
-        }
-    </style>
+    <title>Add Arguments</title>
 </head>
 <body>
-    <form class="row g-3">
-        <div class="col-auto">
-            <button type="button" class="btn btn-light border-button">My Arg</button>
-        </div>
-        <div class="col-auto">
-            <select class="form-select" aria-label="Default select example" onchange="handleValueChange(this)" >
+    <div id="arguments-container">
+        <div>
+            <input type="text" class="arg-input" value="my arg">
+            <select class="arg-select" onchange="handleValueChanges(this, 0)">
                 <option value="false">false</option>
                 <option value="true">true</option>
             </select>
         </div>
-        <div id="box" class="container"></div>
-        <div class="col-auto">
-            <button type="button" class="btn btn-light border-button" onclick="addNewArgument()">+ add arg</button>
-        </div>
+    </div>
 
-        <div id="argumentsContainer">
-            <!-- Existing argument field -->
-            <div class="container">
-                <div class="select-reset">
-                    <select class="form-select" aria-label="Default select example" onchange="handleSelectChange(this)">
-                        <option value="select_default">select...</option>
-                        <option value="constant" onchange="constantValueChange()">constant</option>
-                        <option value="arg">argument</option>
-                        <option value="and">and</option>
-                        <option value="or">or</option>
-                    </select>
-                </div>
-                <button onclick="resetSelect()">✕</button>
+    <button type="button" id="add-arg-button" onclick="addArgument()">+ add arg</button>
+
+    <div id="argumentsContainer">
+        <div class="container">
+            <div class="select-reset">
+                <select class="form-select" aria-label="Default select example" onchange="handleSelectChange(this)">
+                    <option value="select_default">select...</option>
+                    <option value="constant">constant</option>
+                    <option value="arg">argument</option>
+                    <option value="and">and</option>
+                    <option value="or">or</option>
+                </select>
             </div>
+            <div class="container" id="addbox"></div>
+            <button onclick="resetSelect()">✕</button>
         </div>
-        <p id="result">result : undefined</p>
-    </form>
+    </div>
+    <p id="result">result: undefined</p>
 
     <script>
+        let x = 0;
+        let globalarguments = [{arg: 'My arg', value: false}];
+
+        function addArgument() {
+            const argumentsContainer = document.getElementById("arguments-container");
+
+            const newArgument = document.createElement("div");
+            const argInput = document.createElement("input");
+            argInput.type = "text";
+            argInput.value = "newarg";
+            argInput.classList.add("arg-input");
+            newArgument.appendChild(argInput);
+
+            const argSelect = document.createElement("select");
+            argSelect.classList.add("arg-select");
+            const optionFalse = document.createElement("option");
+            optionFalse.value = "false";
+            optionFalse.textContent = "false";
+            argSelect.appendChild(optionFalse);
+            const optionTrue = document.createElement("option");
+            optionTrue.value = "true";
+            optionTrue.textContent = "true";
+            argSelect.appendChild(optionTrue);
+
+            newArgument.appendChild(argSelect);
+
+            argSelect.addEventListener("change", function() {
+                handleValueChange(this, 1);
+            });
+
+            globalarguments.push({arg: argInput.value, value: argSelect.value});
+
+            argumentsContainer.append(newArgument);
+        }
+
+        const addArgButton = document.getElementById("add-arg-button");
+        addArgButton.addEventListener("click", addArgument);
+
         function resetSelect() {
             const selectElement = document.querySelector(".form-select");
             selectElement.selectedIndex = 0;
@@ -64,33 +82,24 @@
 
         function handleSelectChange(selectElement) {
             const selectedValue = selectElement.value;
+            const newbox = document.querySelector("#addbox");
+            newbox.innerHTML = "";
+
             if (selectedValue === "and") {
-                addArgument();
-                addArgument();
-                //selectElement.selectedIndex = 0; // Reset the select option to the default value
+                x = 1;
+                addNewArgument();
+                addNewArgument();
+            } else if (selectedValue === "or") {
+                x = 3;
+            } else if (selectedValue === 'constant') {
+                constantValueChange();
+            } else if (selectedValue === 'arg') {
+                argumentlist();
             }
         }
-        function handleValueChange(selectValue)
-        {
-            document.querySelector("#result").innerHTML="result : "+selectValue.value;
-        }
 
-        function addNewArgument()
-        {
-            const formtag= document.createElement("form");
-            formtag.setAttribute("class","container");
-
-            const newArgumentDiv1= document.createElement("div");
-            newArgumentDiv1.setAttribute("class","col-auto");
-
-            const newArgumentDiv2= document.createElement("div");
-            newArgumentDiv2.setAttribute("class","col-auto");
-
-            const button1 = document.createElement("input");
-            button1.value="newArg";
-            button1.textContent="newArg"
-            // button1.classList.add("btn btn-light border-button");
-           
+        function constantValueChange() {
+            const newbox = document.querySelector("#addbox");
             const selectElement = document.createElement("select");
             selectElement.classList.add("form-select");
             selectElement.setAttribute("aria-label", "Default select example");
@@ -98,73 +107,91 @@
             const selectDefaultOption = document.createElement("option");
             selectDefaultOption.value = "false";
             selectDefaultOption.textContent = "false";
-
+            
             const constantOption = document.createElement("option");
             constantOption.value = "true";
             constantOption.textContent = "true";
 
-            newArgumentDiv1.append(button1);
-            selectElement.append(selectDefaultOption,constantOption);
-            newArgumentDiv2.append(selectElement);
-            
-            formtag.append(newArgumentDiv1,newArgumentDiv2)
-            document.querySelector("#box").append(formtag);
-
+            selectElement.append(selectDefaultOption, constantOption);
+            newbox.append(selectElement);
         }
 
-        // function addArgument() {
-        //     const argumentsContainer = document.getElementById("argumentsContainer");
+        function argumentlist() {
+            const newbox = document.querySelector("#addbox");
+            const selectElement = document.createElement("select");
+            selectElement.classList.add("form-select");
+            selectElement.setAttribute("aria-label", "Default select example");
+            
+            globalarguments.forEach((el) => {
+                const selectDefaultOption = document.createElement("option");
+                selectDefaultOption.value = el.arg;
+                selectDefaultOption.textContent = el.arg;
+                selectElement.append(selectDefaultOption);
+            });
 
-        //     // Create a new argument field
-        //     const newArgumentField = document.createElement("div");
-        //     newArgumentField.classList.add("container");
+            newbox.append(selectElement);
+        }
 
-        //     const selectResetDiv = document.createElement("div");
-        //     selectResetDiv.classList.add("select-reset");
+        function handleValueChanges(selectValue, x) {
+            if (x === 0)
+                globalarguments[0].value = selectValue.value;
+            console.log("handle value changes: " + x);
+            console.log(globalarguments);
+        }
 
-        //     const selectElement = document.createElement("select");
-        //     selectElement.classList.add("form-select");
-        //     selectElement.setAttribute("aria-label", "Default select example");
+        function handleValueChange(selectValue, x) {
+            globalarguments[1].value = selectValue.value;
+            console.log("handle value changes: " + x);
+            console.log(globalarguments);
 
-        //     const selectDefaultOption = document.createElement("option");
-        //     selectDefaultOption.value = "select_default";
-        //     selectDefaultOption.textContent = "select...";
+            if (x === 1 && globalarguments.length === 2) {
+                let bool1 = globalarguments[0].value;
+                let bool2 = globalarguments[1].value;
+                let bool3 = bool1 && bool2;
 
-        //     const constantOption = document.createElement("option");
-        //     constantOption.value = "constant";
-        //     constantOption.textContent = "constant";
+                document.querySelector("#result").innerHTML = "result: " + bool3;
+            } else if (x === 3 && globalarguments.length === 2) {
+                let bool1 = globalarguments[0].value;
+                let bool2 = globalarguments[1].value;
+                let bool3 = bool1 || bool2;
 
-        //     const argOption = document.createElement("option");
-        //     argOption.value = "arg";
-        //     argOption.textContent = "argument";
+                document.querySelector("#result").innerHTML = "result: " + bool3;
+            } else {
+                document.querySelector("#result").innerHTML = "result: " + selectValue.value;
+            }
+        }
 
-        //     const andOption = document.createElement("option");
-        //     andOption.value = "and";
-        //     andOption.textContent = "and";
-        //     andOption.onchange=handleSelectChange("and");
+        function addNewArgument() {
+            const formtag = document.createElement("form");
+            formtag.setAttribute("class", "container");
+            const selectElement = document.createElement("select");
+            selectElement.classList.add("form-select");
+            selectElement.setAttribute("aria-label", "Default select example");
 
-        //     const orOption = document.createElement("option");
-        //     orOption.value = "or";
-        //     orOption.textContent = "or";
+            const selectDefaultOption = document.createElement("option");
+            selectDefaultOption.value = "select...";
+            selectDefaultOption.textContent = "select";
 
-        //     selectElement.appendChild(selectDefaultOption);
-        //     selectElement.appendChild(constantOption);
-        //     selectElement.appendChild(argOption);
-        //     selectElement.appendChild(andOption);
-        //     selectElement.appendChild(orOption);
+            const constantOption = document.createElement("option");
+            constantOption.value = "constant";
+            constantOption.textContent = "constant";
 
-        //     const closeButton = document.createElement("button");
-        //     closeButton.textContent = "✕";
-        //     closeButton.onclick = resetSelect;
+            const selectDefaultOption1 = document.createElement("option");
+            selectDefaultOption1.value = "argument";
+            selectDefaultOption1.textContent = "argument";
 
-        //     selectResetDiv.appendChild(selectElement);
-        //     newArgumentField.appendChild(selectResetDiv);
-        //     newArgumentField.appendChild(closeButton);
+            const constantOption1 = document.createElement("option");
+            constantOption1.value = "and";
+            constantOption1.textContent = "and";
 
-        //     argumentsContainer.appendChild(newArgumentField);
-        // }
+            const constantOption2 = document.createElement("option");
+            constantOption2.value = "or";
+            constantOption2.textContent = "or";
+
+            selectElement.append(selectDefaultOption, constantOption, selectDefaultOption1, constantOption1, constantOption2);
+            formtag.append(selectElement);
+            document.querySelector("#addbox").append(formtag);
+        }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
