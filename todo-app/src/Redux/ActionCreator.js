@@ -4,6 +4,7 @@ export const ADD_TO_TODO = 'ADD_TODO';
 export const UPDATE_TODO = 'UPDATE_TODO';
 export const REMOVE_FROM_TODO = 'REMOVE_FROM_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SET_DATA='SET_DATA';
 
 // Action Creators 
 
@@ -35,6 +36,14 @@ export const toggleTask = (id) => {
     return ({
         type:TOGGLE_TODO,
         payload:id
+    })
+}
+
+export const setData = (data) => {
+        
+    return ({
+        type:SET_DATA,
+        payload:data
     })
 }
  

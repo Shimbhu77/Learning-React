@@ -1,4 +1,4 @@
-import {ADD_TO_TODO,UPDATE_TODO,REMOVE_FROM_TODO,TOGGLE_TODO} from './ActionCreator';
+import {ADD_TO_TODO,UPDATE_TODO,REMOVE_FROM_TODO,TOGGLE_TODO, SET_DATA} from './ActionCreator';
 
 const initialState = {
     todos: []
@@ -55,7 +55,11 @@ const todoReducer = (state=initialState,action) =>{
                   ...state,
                   todos: toggledTodos
                 };
-          
+        case SET_DATA:
+                    return {
+                      ...state,
+                      todos: [...action.payload]
+                    };   
         default:
                 return state;
     }
