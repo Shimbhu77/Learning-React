@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { addTask, updateTask, deleteTask, toggleTask, setData } from '../Redux/ActionCreator';
 import { useDispatch, useSelector } from 'react-redux';
+import TodoForm from './TodoForm';
 
 export default function Task() {
   const [inputValue, setInputValue] = useState('Enter Tasks name');
@@ -92,6 +93,7 @@ export default function Task() {
   };
   const handleUpdateTask = (id) => {
     console.log(id + " updated");
+
   }
 
   return (
@@ -132,6 +134,7 @@ export default function Task() {
 
         ))}
       </div>
+      <TodoForm/>
     </>
   )
 }
