@@ -1,0 +1,36 @@
+{
+    
+    "users": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "age": 27,
+      "email": "aarav.sharma@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Ananya Patel",
+      "age": 31,
+      "email": "ananya.patel@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Aditi Gupta",
+      "age": 29,
+      "email": "aditi.gupta@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Aryan Verma",
+      "age": 33,
+      "email": "aryan.verma@example.com"
+    },
+    {
+      "id": 5,
+      "name": "Avni Singh",
+      "age": 26,
+      "email": "avni.singh@example.com"
+    }
+  ]
+}
+  
