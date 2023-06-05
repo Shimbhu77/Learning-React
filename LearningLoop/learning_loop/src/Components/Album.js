@@ -37,14 +37,14 @@ const defaultTheme = createTheme();
 
 
 export default function Album() {
-   
+   const key ="";
    const input = "Guru Randhawa songs"
    const [data, setData] = React.useState([]);
 
    React.useEffect(()=>{
       const fetchData =  async () =>{
            try {
-            const contentData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${input}&key=AIzaSyDBPM03vHCYOeH3HMmZcSQygmELj3PSpNM`);
+            const contentData = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${input}&key=${key}`);
             const jsonData = await contentData.json();
             setData(jsonData.items);
             console.log(jsonData);
