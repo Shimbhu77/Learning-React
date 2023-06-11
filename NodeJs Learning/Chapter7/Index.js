@@ -7,11 +7,11 @@ var jwt = require('jsonwebtoken');
 
 const userRouter  = require('./Routes/Users');
 const authenticationRouter  = require('./Routes/Auth');
-console.log(process.env.SERVER_PATH);
-main().catch(err => console.log(err));
+// console.log(process.env.SERVER_PATH);
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+  await mongoose.connect(process.env.SERVER_PATH);
   console.log("database connected");
 }
 
@@ -49,6 +49,12 @@ server.use('/auth',authenticationRouter.authRouter);
 server.use('/',auth,userRouter.router);
 
 
-server.listen(port,()=>{
-    console.log(`server started on port ${port}`);
+server.listen(port, async ()=>{
+     try {
+       await main();
+       console.log(`server started on port ${port}`);
+      
+     } catch (error) {
+       console.log(error.message);
+     }
 })
