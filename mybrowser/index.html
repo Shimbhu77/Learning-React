@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Browser</title>
+</head>
+<body>
+  <input type="text" id="urlInput" />
+  <button onclick="navigate()">Go</button>
+  <iframe id="browserFrame" width="100%" height="500"></iframe>
+
+  <script>
+    function navigate() {
+      var url = document.getElementById("urlInput").value;
+      var frame = document.getElementById("browserFrame");
+      frame.src = url;
+    }
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const server = express();
-const port = 8888;
+const port = 8088;
 var jwt = require('jsonwebtoken');
 
 const userRouter  = require('./Routes/Users');
@@ -11,7 +11,8 @@ const authenticationRouter  = require('./Routes/Auth');
 
 async function main() {
 
-  await mongoose.connect(process.env.SERVER_PATH);
+  // await mongoose.connect(process.env.SERVER_PATH);
+  await mongoose.connect('mongodb://localhost:27017/users');
   console.log("database connected");
 }
 
