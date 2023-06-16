@@ -60,35 +60,47 @@ const Form = () => {
       dob: dob,
       age: ageVal,
     };
-    const url = 'http://localhost:8888/home/users'; // Replace with your API endpoint
-    
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(details)
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log('Response:', result);
-        alert("record added successfully.")
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    
-    console.log(details);
 
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setCountry('');
-    setState('');
-    setCity('');
-    setGender('');
-    setDob('');
-    setAge('');
+    if(age<=14)
+    {
+       alert("age should be above 14 years.");
+       setAge('');
+    }
+    else
+    {
+        const url = 'http://localhost:8888/home/users'; // Replace with your API endpoint
+      
+        fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(details)
+        })
+          .then(response => response.json())
+          .then(result => {
+            console.log('Response:', result);
+            alert("record added successfully.")
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        
+        console.log(details);
+
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setCountry('');
+        setState('');
+        setCity('');
+        setGender('');
+        setDob('');
+        setAge('');
+    }
+    
+    
+  
   };
   
   
