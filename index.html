@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Arguments</title>
 </head>
+
 <body>
     <div id="arguments-container">
         <div>
@@ -37,161 +39,60 @@
     <p id="result">result: undefined</p>
 
     <script>
-        let x = 0;
-        let globalarguments = [{arg: 'My arg', value: false}];
 
-        function addArgument() {
-            const argumentsContainer = document.getElementById("arguments-container");
+        // 
+        // async function fetchData()
+        // {
 
-            const newArgument = document.createElement("div");
-            const argInput = document.createElement("input");
-            argInput.type = "text";
-            argInput.value = "newarg";
-            argInput.classList.add("arg-input");
-            newArgument.appendChild(argInput);
+        //     const fetch = require('node-fetch');
+        //     const url = 'https://countries-states-cities-dataset.p.rapidapi.com/list-countries';
+        //     const options = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Key': '768ea20d12msh3dd615b5913c5b5p13dcfdjsn7bd0b8e1befb',
+        //         'X-RapidAPI-Host': 'countries-states-cities-dataset.p.rapidapi.com'
+        //     }
+        //     };
 
-            const argSelect = document.createElement("select");
-            argSelect.classList.add("arg-select");
-            const optionFalse = document.createElement("option");
-            optionFalse.value = "false";
-            optionFalse.textContent = "false";
-            argSelect.appendChild(optionFalse);
-            const optionTrue = document.createElement("option");
-            optionTrue.value = "true";
-            optionTrue.textContent = "true";
-            argSelect.appendChild(optionTrue);
+        //     try {
+        //     const response = await fetch(url, options);
+        //     const result = await response.text();
+        //     console.log(result);
+        //     } catch (error) {
+        //     console.error(error);
+        //     }
+        // } 
 
-            newArgument.appendChild(argSelect);
+        // function fetchData() {
+        // const apiKey = '768ea20d12msh3dd615b5913c5b5p13dcfdjsn7bd0b8e1befb';
+        // const url = `https://countries-states-cities-dataset.p.rapidapi.com/list-countries?apiKey=${apiKey}`;
 
-            argSelect.addEventListener("change", function() {
-                handleValueChange(this, 1);
-            });
+        // fetch(url)
+        //     .then(response => response.text())
+        //     .then(result => console.log(result))
+        //     .catch(error => console.error(error));
+        // }
 
-            globalarguments.push({arg: argInput.value, value: argSelect.value});
+        async function fetchData() {
+            const url = 'https://countries-states-cities-dataset.p.rapidapi.com/list-countries';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '768ea20d12msh3dd615b5913c5b5p13dcfdjsn7bd0b8e1befb',
+                    'X-RapidAPI-Host': 'countries-states-cities-dataset.p.rapidapi.com'
+                }
+            };
 
-            argumentsContainer.append(newArgument);
-        }
-
-        const addArgButton = document.getElementById("add-arg-button");
-        addArgButton.addEventListener("click", addArgument);
-
-        function resetSelect() {
-            const selectElement = document.querySelector(".form-select");
-            selectElement.selectedIndex = 0;
-        }
-
-        function handleSelectChange(selectElement) {
-            const selectedValue = selectElement.value;
-            const newbox = document.querySelector("#addbox");
-            newbox.innerHTML = "";
-
-            if (selectedValue === "and") {
-                x = 1;
-                addNewArgument();
-                addNewArgument();
-            } else if (selectedValue === "or") {
-                x = 3;
-            } else if (selectedValue === 'constant') {
-                constantValueChange();
-            } else if (selectedValue === 'arg') {
-                argumentlist();
+            try {
+                const response = await fetch(url, options);
+                const result = await response.text();
+                console.log(result);
+            } catch (error) {
+                console.error(error);
             }
         }
-
-        function constantValueChange() {
-            const newbox = document.querySelector("#addbox");
-            const selectElement = document.createElement("select");
-            selectElement.classList.add("form-select");
-            selectElement.setAttribute("aria-label", "Default select example");
-
-            const selectDefaultOption = document.createElement("option");
-            selectDefaultOption.value = "false";
-            selectDefaultOption.textContent = "false";
-            
-            const constantOption = document.createElement("option");
-            constantOption.value = "true";
-            constantOption.textContent = "true";
-
-            selectElement.append(selectDefaultOption, constantOption);
-            newbox.append(selectElement);
-        }
-
-        function argumentlist() {
-            const newbox = document.querySelector("#addbox");
-            const selectElement = document.createElement("select");
-            selectElement.classList.add("form-select");
-            selectElement.setAttribute("aria-label", "Default select example");
-            
-            globalarguments.forEach((el) => {
-                const selectDefaultOption = document.createElement("option");
-                selectDefaultOption.value = el.arg;
-                selectDefaultOption.textContent = el.arg;
-                selectElement.append(selectDefaultOption);
-            });
-
-            newbox.append(selectElement);
-        }
-
-        function handleValueChanges(selectValue, x) {
-            if (x === 0)
-                globalarguments[0].value = selectValue.value;
-            console.log("handle value changes: " + x);
-            console.log(globalarguments);
-        }
-
-        function handleValueChange(selectValue, x) {
-            globalarguments[1].value = selectValue.value;
-            console.log("handle value changes: " + x);
-            console.log(globalarguments);
-
-            if (x === 1 && globalarguments.length === 2) {
-                let bool1 = globalarguments[0].value;
-                let bool2 = globalarguments[1].value;
-                let bool3 = bool1 && bool2;
-
-                document.querySelector("#result").innerHTML = "result: " + bool3;
-            } else if (x === 3 && globalarguments.length === 2) {
-                let bool1 = globalarguments[0].value;
-                let bool2 = globalarguments[1].value;
-                let bool3 = bool1 || bool2;
-
-                document.querySelector("#result").innerHTML = "result: " + bool3;
-            } else {
-                document.querySelector("#result").innerHTML = "result: " + selectValue.value;
-            }
-        }
-
-        function addNewArgument() {
-            const formtag = document.createElement("form");
-            formtag.setAttribute("class", "container");
-            const selectElement = document.createElement("select");
-            selectElement.classList.add("form-select");
-            selectElement.setAttribute("aria-label", "Default select example");
-
-            const selectDefaultOption = document.createElement("option");
-            selectDefaultOption.value = "select...";
-            selectDefaultOption.textContent = "select";
-
-            const constantOption = document.createElement("option");
-            constantOption.value = "constant";
-            constantOption.textContent = "constant";
-
-            const selectDefaultOption1 = document.createElement("option");
-            selectDefaultOption1.value = "argument";
-            selectDefaultOption1.textContent = "argument";
-
-            const constantOption1 = document.createElement("option");
-            constantOption1.value = "and";
-            constantOption1.textContent = "and";
-
-            const constantOption2 = document.createElement("option");
-            constantOption2.value = "or";
-            constantOption2.textContent = "or";
-
-            selectElement.append(selectDefaultOption, constantOption, selectDefaultOption1, constantOption1, constantOption2);
-            formtag.append(selectElement);
-            document.querySelector("#addbox").append(formtag);
-        }
+        fetchData();
     </script>
 </body>
+
 </html>
