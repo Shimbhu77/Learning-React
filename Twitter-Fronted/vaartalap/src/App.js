@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoggedNavbar from './components/loggedNavbar';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/sign-in" element={<SignIn/>} />
           <Route path="/sign-up" element={<SignUp/>} />
+          <Route path="/home" element={<LoggedNavbar/>} />
         </Routes>
       </Router>
     </div>
