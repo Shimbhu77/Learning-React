@@ -1,0 +1,1613 @@
+.company-chaabi-co {
+    background-color: #e7efff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .company-chaabi-co .div {
+    background-color: var(--foundation-bluelight);
+    border: 1px none;
+    height: 1117px;
+    position: relative;
+    width: 1728px;
+  }
+  
+  .company-chaabi-co .header-background {
+    height: 145px;
+    left: 356px;
+    position: absolute;
+    top: 0;
+    width: 1372px;
+  }
+  
+  .company-chaabi-co .group {
+    height: 172px;
+    left: 380px;
+    position: absolute;
+    top: 169px;
+    width: 1336px;
+  }
+  
+  .company-chaabi-co .frame {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3333331a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    left: -1px;
+    padding: 20px 16px;
+    position: absolute;
+    top: -1px;
+    width: 318px;
+  }
+  
+  .company-chaabi-co .text-wrapper {
+    color: #333333;
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-style: var(--h5-font-style);
+    font-weight: var(--h5-font-weight);
+    letter-spacing: var(--h5-letter-spacing);
+    line-height: var(--h5-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-2 {
+    align-items: flex-end;
+    display: flex;
+    gap: 38px;
+    position: relative;
+    width: 284px;
+  }
+  
+  .company-chaabi-co .frame-3 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-2 {
+    color: #333333;
+    font-family: var(--h3-bold-font-family);
+    font-size: var(--h3-bold-font-size);
+    font-style: var(--h3-bold-font-style);
+    font-weight: var(--h3-bold-font-weight);
+    letter-spacing: var(--h3-bold-letter-spacing);
+    line-height: var(--h3-bold-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-4 {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-5 {
+    align-items: center;
+    background-color: #018e421a;
+    border-radius: 4px;
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .trend-up {
+    height: 16px !important;
+    min-width: 16px !important;
+    position: relative !important;
+  }
+  
+  .company-chaabi-co .text-wrapper-3 {
+    color: #018e42;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-4 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .chart {
+    height: 100px;
+    min-width: 143px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .group-wrapper {
+    height: 12px;
+    left: 10px;
+    position: absolute;
+    top: 86px;
+    width: 134px;
+  }
+  
+  .company-chaabi-co .group-2 {
+    height: 12px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .div-wrapper {
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .text-wrapper-5 {
+    color: #333333;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 8px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+  }
+  
+  .company-chaabi-co .group-3 {
+    height: 12px;
+    left: 23px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .group-4 {
+    height: 12px;
+    left: 42px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+  
+  .company-chaabi-co .group-5 {
+    height: 12px;
+    left: 65px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .group-6 {
+    height: 12px;
+    left: 86px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .group-7 {
+    height: 12px;
+    left: 108px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .group-8 {
+    height: 12px;
+    left: 129px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .img {
+    height: 79px;
+    left: 14px;
+    position: absolute;
+    top: 3px;
+    width: 128px;
+  }
+  
+  .company-chaabi-co .frame-6 {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3333331a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    display: flex;
+    flex-direction: column;
+    height: 172px;
+    justify-content: space-between;
+    left: 339px;
+    padding: 20px 16px;
+    position: absolute;
+    top: -1px;
+    width: 318px;
+  }
+  
+  .company-chaabi-co .frame-7 {
+    align-items: center;
+    background-color: #ed1c241a;
+    border-radius: 4px;
+    display: flex;
+    gap: 4px;
+    padding: 4px 8px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-6 {
+    color: #ed1c24;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-7 {
+    color: #333333;
+    font-family: var(--title-2-font-family);
+    font-size: var(--title-2-font-size);
+    font-style: var(--title-2-font-style);
+    font-weight: var(--title-2-font-weight);
+    letter-spacing: var(--title-2-letter-spacing);
+    line-height: var(--title-2-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-8 {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3333331a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    display: flex;
+    flex-direction: column;
+    height: 172px;
+    justify-content: space-between;
+    left: 679px;
+    padding: 20px 16px;
+    position: absolute;
+    top: -1px;
+    width: 318px;
+  }
+  
+  .company-chaabi-co .chart-2 {
+    height: 100px;
+    margin-right: -1px;
+    min-width: 143px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .frame-9 {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #3333331a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    display: flex;
+    flex-direction: column;
+    height: 172px;
+    justify-content: space-between;
+    left: 1019px;
+    padding: 20px 16px;
+    position: absolute;
+    top: -1px;
+    width: 318px;
+  }
+  
+  .company-chaabi-co .overlap {
+    height: 760px;
+    left: 380px;
+    position: absolute;
+    top: 346px;
+    width: 1348px;
+  }
+  
+  .company-chaabi-co .frame-10 {
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #b4ceff;
+    display: flex;
+    flex-direction: column;
+    gap: 4.33px;
+    height: 413px;
+    left: 0;
+    padding: 20px 17.32px 21.64px;
+    position: absolute;
+    top: 21px;
+    width: 316px;
+  }
+  
+  .company-chaabi-co .chapter-wise-status {
+    color: #333333;
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-style: var(--h5-font-style);
+    font-weight: var(--h5-font-weight);
+    height: 35px;
+    letter-spacing: var(--h5-letter-spacing);
+    line-height: var(--h5-line-height);
+    margin-left: -1.32px;
+    margin-right: -1.32px;
+    margin-top: -1.08px;
+    position: relative;
+    width: 284px;
+  }
+  
+  .company-chaabi-co .overlap-wrapper {
+    height: 238px;
+    min-width: 238px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .overlap-group {
+    height: 227px;
+    left: 6px;
+    position: relative;
+    top: 6px;
+    width: 238px;
+  }
+  
+  .company-chaabi-co .ellipse {
+    height: 103px;
+    left: 0;
+    position: absolute;
+    top: 18px;
+    width: 113px;
+  }
+  
+  .company-chaabi-co .ellipse-2 {
+    height: 136px;
+    left: 41px;
+    position: absolute;
+    top: 0;
+    width: 196px;
+  }
+  
+  .company-chaabi-co .ellipse-3 {
+    height: 108px;
+    left: 113px;
+    position: absolute;
+    top: 113px;
+    width: 113px;
+  }
+  
+  .company-chaabi-co .ellipse-4 {
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 113px;
+    width: 113px;
+  }
+  
+  .company-chaabi-co .ellipse-5 {
+    height: 113px;
+    left: 99px;
+    position: absolute;
+    top: 113px;
+    width: 49px;
+  }
+  
+  .company-chaabi-co .text-wrapper-8 {
+    color: #333333;
+    font-family: var(--title-1-bold-font-family);
+    font-size: var(--title-1-bold-font-size);
+    font-style: var(--title-1-bold-font-style);
+    font-weight: var(--title-1-bold-font-weight);
+    left: 134px;
+    letter-spacing: var(--title-1-bold-letter-spacing);
+    line-height: var(--title-1-bold-line-height);
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .text-wrapper-9 {
+    color: #333333;
+    font-family: var(--title-2-font-family);
+    font-size: var(--title-2-font-size);
+    font-style: var(--title-2-font-style);
+    font-weight: var(--title-2-font-weight);
+    left: 171px;
+    letter-spacing: var(--title-2-letter-spacing);
+    line-height: var(--title-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 147px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .text-wrapper-10 {
+    color: #333333;
+    font-family: var(--title-2-font-family);
+    font-size: var(--title-2-font-size);
+    font-style: var(--title-2-font-style);
+    font-weight: var(--title-2-font-weight);
+    left: 117px;
+    letter-spacing: var(--title-2-letter-spacing);
+    line-height: var(--title-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 191px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .text-wrapper-11 {
+    color: #333333;
+    font-family: var(--title-2-font-family);
+    font-size: var(--title-2-font-size);
+    font-style: var(--title-2-font-style);
+    font-weight: var(--title-2-font-weight);
+    left: 39px;
+    letter-spacing: var(--title-2-letter-spacing);
+    line-height: var(--title-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 149px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .text-wrapper-12 {
+    color: #333333;
+    font-family: var(--title-2-font-family);
+    font-size: var(--title-2-font-size);
+    font-style: var(--title-2-font-style);
+    font-weight: var(--title-2-font-weight);
+    left: 20px;
+    letter-spacing: var(--title-2-letter-spacing);
+    line-height: var(--title-2-line-height);
+    position: absolute;
+    text-align: center;
+    top: 66px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .overlap-group-wrapper {
+    height: 107px;
+    left: 60px;
+    position: absolute;
+    top: 60px;
+    width: 107px;
+  }
+  
+  .company-chaabi-co .overlap-2 {
+    height: 110px;
+    position: relative;
+    top: -3px;
+  }
+  
+  .company-chaabi-co .polygon {
+    height: 24px;
+    left: 60px;
+    position: absolute;
+    top: 0;
+    width: 23px;
+  }
+  
+  .company-chaabi-co .ellipse-6 {
+    background-color: #ffffff;
+    border: 1.78px dashed;
+    border-radius: 53.27px;
+    box-shadow: 0px 0px 11.22px #00000040;
+    height: 107px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 107px;
+  }
+  
+  .company-chaabi-co .frame-11 {
+    height: 96px;
+    left: 5px;
+    position: absolute;
+    top: 9px;
+    width: 96px;
+  }
+  
+  .company-chaabi-co .finshed-training-wrapper {
+    background-color: #ffffff;
+    border-radius: 37.29px;
+    height: 75px;
+    left: 11px;
+    position: relative;
+    top: 11px;
+    width: 75px;
+  }
+  
+  .company-chaabi-co .finshed-training {
+    color: #333333;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    left: 8px;
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    width: 57px;
+  }
+  
+  .company-chaabi-co .frame-12 {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    height: 113px;
+    justify-content: space-between;
+    margin-bottom: -23.3px;
+    padding: 17px 21.64px 0px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .frame-13 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8.66px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-14 {
+    align-items: center;
+    display: flex;
+    gap: 8.66px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .ellipse-7 {
+    background-color: var(--foundation-bluenormal);
+    border-radius: 4.33px;
+    height: 8.66px;
+    min-width: 8.66px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .text-wrapper-13 {
+    color: #333333;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    margin-top: -1.08px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .ellipse-8 {
+    background-color: #8400d5;
+    border-radius: 4.33px;
+    height: 8.66px;
+    min-width: 8.66px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .ellipse-9 {
+    background-color: #ed1c24;
+    border-radius: 4.33px;
+    height: 8.66px;
+    min-width: 8.66px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .ellipse-10 {
+    background-color: #3333334c;
+    border-radius: 4.33px;
+    height: 8.66px;
+    min-width: 8.66px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .ellipse-11 {
+    background-color: #425f57;
+    border-radius: 4.33px;
+    height: 8.66px;
+    min-width: 8.66px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .group-9 {
+    height: 469px;
+    left: 312px;
+    position: absolute;
+    top: 0;
+    width: 1036px;
+  }
+  
+  .company-chaabi-co .quiz-passing {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 12px 30px #2f327d1a;
+    height: 302px;
+    left: 338px;
+    position: absolute;
+    top: 458px;
+    width: 385px;
+  }
+  
+  .company-chaabi-co .doughnut {
+    height: 196px;
+    left: 26px;
+    position: absolute;
+    top: 75px;
+    width: 196px;
+  }
+  
+  .company-chaabi-co .overlap-group-2 {
+    height: 196px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .element {
+    height: 98px;
+    left: 19px;
+    position: absolute;
+    top: 98px;
+    width: 177px;
+  }
+  
+  .company-chaabi-co .element-2 {
+    height: 54px;
+    left: 18px;
+    position: absolute;
+    top: 132px;
+    width: 54px;
+  }
+  
+  .company-chaabi-co .element-3 {
+    height: 98px;
+    left: 67px;
+    position: absolute;
+    top: 0;
+    width: 129px;
+  }
+  
+  .company-chaabi-co .element-4 {
+    height: 151px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 80px;
+  }
+  
+  .company-chaabi-co .frame-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 276px;
+    justify-content: center;
+    left: 20px;
+    position: absolute;
+    top: 20px;
+    width: 122px;
+  }
+  
+  .company-chaabi-co .quiz-passing-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 115px;
+  }
+  
+  .company-chaabi-co .quiz-passing-2 {
+    color: #333333;
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-style: var(--h5-font-style);
+    font-weight: var(--h5-font-weight);
+    letter-spacing: var(--h5-letter-spacing);
+    line-height: var(--h5-line-height);
+    margin-right: -36px;
+    margin-top: -0.6px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-15 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 252px;
+    position: absolute;
+    top: 102px;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .frame-16 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .ellipse-12 {
+    background-color: #018e42;
+    border-radius: 5.74px;
+    height: 11.48px;
+    min-width: 11.48px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .frame-17 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-14 {
+    color: #333333;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    margin-top: -0.88px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-15 {
+    color: #333333;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .ellipse-13 {
+    background-color: #ed1c24;
+    border-radius: 5.74px;
+    height: 11.48px;
+    min-width: 11.48px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    height: 302px;
+    left: 747px;
+    position: absolute;
+    top: 458px;
+    width: 589px;
+  }
+  
+  .company-chaabi-co .group-10 {
+    height: 256px;
+    left: 771px;
+    position: absolute;
+    top: 478px;
+    width: 546px;
+  }
+  
+  .company-chaabi-co .group-11 {
+    height: 209px;
+    left: 6px;
+    position: absolute;
+    top: 47px;
+    width: 538px;
+  }
+  
+  .company-chaabi-co .group-12 {
+    height: 188px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 479px;
+  }
+  
+  .company-chaabi-co .frame-18 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 28.14px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .text-wrapper-16 {
+    color: #333333;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    margin-top: -0.88px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .group-13 {
+    height: 169px;
+    left: 32px;
+    position: absolute;
+    top: 18px;
+    width: 447px;
+  }
+  
+  .company-chaabi-co .overlap-group-3 {
+    height: 169px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .frame-19 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 42.21px;
+    justify-content: flex-end;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .line {
+    height: 1px;
+    margin-top: -0.88px;
+    min-width: 446.7px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .line-2 {
+    height: 1px;
+    min-width: 446.7px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .line-3 {
+    height: 1px;
+    margin-bottom: -0.12px;
+    min-width: 446.7px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .frame-20 {
+    align-items: flex-end;
+    display: flex;
+    gap: 35.17px;
+    justify-content: center;
+    left: 25px;
+    position: absolute;
+    top: 23px;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .rectangle-wrapper {
+    background-color: #e7efff;
+    height: 69.47px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-2 {
+    background-color: var(--foundation-bluenormal);
+    height: 37px;
+    position: relative;
+    top: 32px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .group-14 {
+    background-color: #e7efff;
+    height: 120.47px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-3 {
+    background-color: var(--foundation-bluenormal);
+    height: 64px;
+    position: relative;
+    top: 56px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .group-15 {
+    background-color: #e7efff;
+    height: 93.21px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-4 {
+    background-color: var(--foundation-bluenormal);
+    height: 50px;
+    position: relative;
+    top: 43px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .group-16 {
+    background-color: #e7efff;
+    height: 128.38px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-5 {
+    background-color: var(--foundation-bluenormal);
+    height: 69px;
+    position: relative;
+    top: 60px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .group-17 {
+    background-color: #e7efff;
+    height: 145.97px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-6 {
+    background-color: var(--foundation-bluenormal);
+    height: 78px;
+    position: relative;
+    top: 68px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .group-18 {
+    background-color: #e7efff;
+    height: 102px;
+    min-width: 8.79px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .rectangle-7 {
+    background-color: var(--foundation-bluenormal);
+    height: 54px;
+    position: relative;
+    top: 48px;
+    width: 9px;
+  }
+  
+  .company-chaabi-co .frame-21 {
+    align-items: flex-start;
+    display: flex;
+    gap: 35.17px;
+    height: 15px;
+    left: 57px;
+    position: absolute;
+    top: 194px;
+    width: 481px;
+  }
+  
+  .company-chaabi-co .daily-training {
+    color: #333333;
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-style: var(--h5-font-style);
+    font-weight: var(--h5-font-weight);
+    left: 0;
+    letter-spacing: var(--h5-letter-spacing);
+    line-height: var(--h5-line-height);
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .group-19 {
+    height: 302px;
+    left: 0;
+    position: absolute;
+    top: 458px;
+    width: 334px;
+  }
+  
+  .company-chaabi-co .overlap-3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1878f240;
+    height: 302px;
+    position: relative;
+    width: 316px;
+  }
+  
+  .company-chaabi-co .monthly-training {
+    color: #333333;
+    font-family: var(--h5-font-family);
+    font-size: var(--h5-font-size);
+    font-style: var(--h5-font-style);
+    font-weight: var(--h5-font-weight);
+    left: 16px;
+    letter-spacing: var(--h5-letter-spacing);
+    line-height: var(--h5-line-height);
+    position: absolute;
+    top: 20px;
+    white-space: nowrap;
+  }
+  
+  .company-chaabi-co .frame-22 {
+    align-items: center;
+    display: flex;
+    gap: 5.71px;
+    justify-content: center;
+    left: 16px;
+    position: absolute;
+    top: 56px;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .iconly-light-arrow {
+    background-image: url(./arrow-up.svg);
+    background-size: 100% 100%;
+    height: 16.31px;
+    min-width: 16.31px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .p {
+    color: #33333380;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    margin-top: -0.82px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .ellipse-14 {
+    background-color: #ffffff;
+    border: 1.63px solid;
+    border-color: var(--foundation-bluenormal);
+    border-radius: 8.16px;
+    height: 16px;
+    left: 20px;
+    position: absolute;
+    top: 100px;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .ellipse-15 {
+    background-color: #ffffff;
+    border: 1.63px solid;
+    border-color: var(--foundation-bluenormal);
+    border-radius: 8.16px;
+    height: 16px;
+    left: 20px;
+    position: absolute;
+    top: 151px;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .ellipse-16 {
+    background-color: #ffffff;
+    border: 1.63px solid;
+    border-color: var(--foundation-bluenormal);
+    border-radius: 8.16px;
+    height: 16px;
+    left: 20px;
+    position: absolute;
+    top: 203px;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .ellipse-17 {
+    background-color: #ffffff;
+    border: 1.63px solid;
+    border-color: var(--foundation-bluenormal);
+    border-radius: 8.16px;
+    height: 16px;
+    left: 20px;
+    position: absolute;
+    top: 255px;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .line-4 {
+    height: 35px;
+    left: 28px;
+    position: absolute;
+    top: 116px;
+    width: 1px;
+  }
+  
+  .company-chaabi-co .line-5 {
+    height: 35px;
+    left: 28px;
+    position: absolute;
+    top: 168px;
+    width: 1px;
+  }
+  
+  .company-chaabi-co .line-6 {
+    height: 35px;
+    left: 28px;
+    position: absolute;
+    top: 220px;
+    width: 1px;
+  }
+  
+  .company-chaabi-co .text-wrapper-17 {
+    color: #333333;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 100px;
+    white-space: nowrap;
+    width: 204px;
+  }
+  
+  .company-chaabi-co .text-wrapper-18 {
+    color: #333333;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 151px;
+    white-space: nowrap;
+    width: 204px;
+  }
+  
+  .company-chaabi-co .text-wrapper-19 {
+    color: #333333;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 203px;
+    white-space: nowrap;
+    width: 204px;
+  }
+  
+  .company-chaabi-co .text-wrapper-20 {
+    color: #333333;
+    font-family: var(--body-bold-font-family);
+    font-size: var(--body-bold-font-size);
+    font-style: var(--body-bold-font-style);
+    font-weight: var(--body-bold-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--body-bold-letter-spacing);
+    line-height: var(--body-bold-line-height);
+    position: absolute;
+    top: 255px;
+    white-space: nowrap;
+    width: 204px;
+  }
+  
+  .company-chaabi-co .element-workers-took-this {
+    color: #33333380;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    height: 16px;
+    left: 43px;
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: absolute;
+    top: 119px;
+    white-space: nowrap;
+    width: 253px;
+  }
+  
+  .company-chaabi-co .element-workers-took {
+    color: #33333380;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: absolute;
+    top: 170px;
+    white-space: nowrap;
+    width: 248px;
+  }
+  
+  .company-chaabi-co .element-workers-took-2 {
+    color: #33333380;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: absolute;
+    top: 222px;
+    white-space: nowrap;
+    width: 248px;
+  }
+  
+  .company-chaabi-co .element-workers-took-3 {
+    color: #33333380;
+    font-family: var(--caption-font-family);
+    font-size: var(--caption-font-size);
+    font-style: var(--caption-font-style);
+    font-weight: var(--caption-font-weight);
+    height: 16px;
+    left: 44px;
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    position: absolute;
+    top: 274px;
+    white-space: nowrap;
+    width: 248px;
+  }
+  
+  .company-chaabi-co .last-days {
+    color: #0e2451;
+    font-family: var(--title-1-font-family);
+    font-size: var(--title-1-font-size);
+    font-style: var(--title-1-font-style);
+    font-weight: var(--title-1-font-weight);
+    height: 18px;
+    left: 1199px;
+    letter-spacing: var(--title-1-letter-spacing);
+    line-height: var(--title-1-line-height);
+    position: absolute;
+    top: 479px;
+    white-space: nowrap;
+    width: 113px;
+  }
+  
+  .company-chaabi-co .group-20 {
+    height: 1117px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 356px;
+  }
+  
+  .company-chaabi-co .overlap-4 {
+    height: 1117px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .sidebar-wrapper {
+    box-shadow: 0px 4px 4px #0d62ff;
+    height: 1117px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 356px;
+  }
+  
+  .company-chaabi-co .sidebar {
+    background-color: #ffffff;
+    box-shadow: 0px 11.63px 34.9px #1126920d;
+    height: 1298px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .company-chaabi-co .main-logo {
+    height: 145px;
+    left: -110px;
+    position: absolute;
+    top: 0;
+    width: 575px;
+  }
+  
+  .company-chaabi-co .overlap-group-4 {
+    height: 146px;
+    left: -1px;
+    position: relative;
+    width: 579px;
+  }
+  
+  .company-chaabi-co .logo {
+    height: 143px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 485px;
+  }
+  
+  .company-chaabi-co .separator {
+    background-color: #33333333;
+    border: 0px none;
+    border-color: var(--foundation-bluelight);
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 142px;
+    width: 579px;
+  }
+  
+  .company-chaabi-co .overview {
+    align-items: flex-start;
+    background-color: var(--foundation-bluenormal);
+    border-radius: 4.65px;
+    box-shadow: 0px 2.33px 4.65px #8a92a64c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 35px;
+    padding: 9.31px 27.92px;
+    position: absolute;
+    top: 175px;
+    width: 294px;
+  }
+  
+  .company-chaabi-co .messages {
+    align-items: center;
+    display: flex;
+    gap: 66.31px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .messages-2 {
+    align-items: center;
+    display: flex;
+    gap: 18.61px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .div-wrapper-2 {
+    height: 27.92px;
+    min-width: 27.92px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .div-2 {
+    height: 23px;
+    left: 2px;
+    position: relative;
+    top: 2px;
+    width: 23px;
+  }
+  
+  .company-chaabi-co .overlap-group-5 {
+    height: 23px;
+    position: relative;
+  }
+  
+  .company-chaabi-co .fill {
+    height: 10px;
+    left: 13px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+  
+  .company-chaabi-co .combined-shape {
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 23px;
+  }
+  
+  .company-chaabi-co .menu {
+    color: #ffffff;
+    font-family: var(--title-1-font-family);
+    font-size: var(--title-1-font-size);
+    font-style: var(--title-1-font-style);
+    font-weight: var(--title-1-font-weight);
+    letter-spacing: var(--title-1-letter-spacing);
+    line-height: var(--title-1-line-height);
+    margin-top: -0.7px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 12px;
+    position: absolute;
+    top: 238px;
+    width: 318px;
+  }
+  
+  .company-chaabi-co .menu-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9.31px;
+    justify-content: center;
+    position: relative;
+    width: 271.07px;
+  }
+  
+  .company-chaabi-co .messages-wrapper {
+    align-items: flex-start;
+    border-radius: 0px 37.23px 37.23px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 9.31px 27.92px;
+    position: relative;
+    width: 271.07px;
+  }
+  
+  .company-chaabi-co .messages-3 {
+    align-items: center;
+    display: flex;
+    gap: 63.99px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .game {
+    height: 5px;
+    left: 7px;
+    position: absolute;
+    top: 0;
+    width: 7px;
+  }
+  
+  .company-chaabi-co .game-2 {
+    height: 19px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 23px;
+  }
+  
+  .company-chaabi-co .menu-2 {
+    color: var(--foundation-bluenormal);
+    font-family: var(--title-1-font-family);
+    font-size: var(--title-1-font-size);
+    font-style: var(--title-1-font-style);
+    font-weight: var(--title-1-font-weight);
+    letter-spacing: var(--title-1-letter-spacing);
+    line-height: var(--title-1-line-height);
+    margin-top: -0.7px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .dropdown {
+    border-radius: 18.61px;
+    height: 27.92px;
+    min-width: 27.92px;
+    position: relative;
+    transform: rotate(-90deg);
+  }
+  
+  .company-chaabi-co .messages-4 {
+    align-items: center;
+    display: flex;
+    gap: 89.58px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .company-chaabi-co .location {
+    height: 23px;
+    left: 6px;
+    position: relative;
+    top: 2px;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .path {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 16px;
+  }
+  
+  .company-chaabi-co .ellipse-18 {
+    background-color: var(--foundation-bluenormal);
+    border-radius: 5.82px/1.16px;
+    height: 2px;
+    left: 2px;
+    opacity: 0.4;
+    position: absolute;
+    top: 21px;
+    width: 12px;
+  }
+  
+  .company-chaabi-co .workryt-technologies {
+    color: #33333333;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 11.6px;
+    font-weight: 300;
+    left: 54px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 1254px;
+  }
+  
+  .company-chaabi-co .logo-2 {
+    background-image: url(./image-1.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 57px;
+    left: 76px;
+    position: absolute;
+    top: 40px;
+    width: 204px;
+  }
+  

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@teachablemachine/image": "^0.8.5",
+    "@tensorflow/tfjs": "^4.8.0"
+  }
+}
