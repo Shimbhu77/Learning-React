@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainbox{
+            display: flex;
+            border: 1px solid grey;
+            justify-content: space-around;
+        }
+        #address{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            margin:0px;
+            border:1px solid grey;
+        }
+        #body {
+               border: 1px solid grey;
+               display: flex;
+               justify-content: space-evenly;
+
+              
+        }
+        #bodyfirstbox{
+            border: 1px solid grey;
+            width: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            /* border: 4px solid black; */
+            
+        }
+        #bodyfirstbox > div{
+
+            /* display: flex; */
+            justify-content: space-evenly;
+            border: 2px solid grey;
+            /* margin : auto */
+            /* width: 100%; */
+            
+        }
+        #bodysecondbox{
+            
+            border: 1px solid grey;
+            width: 30%;
+            /* border: 4px solid black; */
+        }
+        #box1{
+            
+            border: 1px solid grey;
+            width: 70%;
+            /* border: 4px solid black; */
+        }
+        .boxdiv1 {
+            display: flex;
+            border: 3px solid grey;
+            justify-content: space-evenly;
+            margin-top: 2px;
+            margin-left: 2px;
+        }
+        .boxdiv1 div {
+            display: flex;
+            justify-content: space-evenly;
+            /* border: 2px solid grey; */
+            margin-left: 2px;
+            
+        }
+        .boxdiv2 {
+            display: flex;
+            border: 3px solid grey;
+            justify-content: space-evenly;
+            margin-top: 340px;
+
+        }
+        #firstbox3 {
+            display: flex;
+            border: 3px solid grey;
+            justify-content: space-evenly;
+        }
+
+        #qty{
+            display: flex;
+            border: 1px solid grey;
+            justify-content: space-evenly;
+        }
+
+        #qty div{
+           
+            border: 1px solid grey;
+            
+        }
+
+        #qtynext div{
+            
+            border: 1px solid grey;
+    
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="mainbox">
+        <div id="logo">
+           logo space
+        </div>
+        <div id="address">
+           <h1>J.K. Transport co.</h1>
+           <p>Godown No-13, BGTA Compound, Opp. Mararha Punjab hotel, Anjurphatta, Bhiwadndi - 421302</p>
+           <p>Mobile no. : 98</p>
+        </div>
+    </div>
+
+    <div id="body">
+        <div id="box1" >
+            <div id="bodyfirstbox">
+                <div> 
+                    <p>From : Bhiwadndi</p>
+                    <p>Consignor : Kunal</p>
+                    <P>Mobile No: </P>
+                    <P>GST NO : 27AAAAP026H2ZN</P>
+                </div>
+                <div>
+                   <p>From : Andheri (777867789879)</p>
+                   <p>Consignor : Kunal</p>
+                   <P>Mobile No: </P>
+                   <P>GST NO : 27AAAAP026H2ZN</P>
+                </div>
+            </div>
+            <div id="firstbox3">
+                <div> 
+                    <div id="qty">
+                        <div>Qty:</div>
+                        <div>Description</div>
+                    </div>
+
+                    <div>
+                        <p>20 :  Bags    of Bag</p>
+                        <p>30 :  Bags    of Bag</p>
+                        <p>10 :  Bags    of Bag</p>
+                        <p>40 :  Bags    of Bag</p>
+
+                        <H5>Total : 100</H5>
+                    </div>
+
+                    <div> banking time : sundry</div>
+                    <div class="boxdiv1">
+                        <div>Remark 98</div>
+                        <div> G.S.T Paid by : Not Applicable</div>
+                    </div>
+                    <div>Delivery Address : andheri</div>
+                    <div>Eway Bill No: </div>
+                </div>
+
+               
+               
+
+                <div id="qtynext">
+                    <div>INV:89</div>
+                    <div>Value : 898</div>
+                    <div>Actual Wt: 20 Charged Wt. 30</div>
+                    <div> Delivery At : Godown</div>
+                </div>
+                
+            </div>
+             
+        </div>
+
+        <div id="bodysecondbox"> 
+            <div class="boxdiv1">
+                <div>LR NO. 57</div>
+                <div>Date 20-07-2023</div>
+            </div>
+            <div >Frieght Type : TO PAY</div>
+            <div class="boxdiv1">
+                <div>Frieght </div>
+                <div>1500</div>
+            </div>
+            <div class="boxdiv1">
+                <div>PickuP</div>
+                <div>200</div>
+            </div>
+            <div class="boxdiv1">
+                <div>Door Pickup</div>
+                <div>300</div>
+            </div>
+
+            <div class="boxdiv2">
+                <div>Total</div>
+                <div>2000</div>
+            </div>
+            <div>Iv admin 04: 19 pm </div>
+            
+        </div>
+    </div>
+</body>
+</html>
