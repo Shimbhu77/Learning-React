@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .login
+        {
+            /* border: 4px solid red; */
+            margin: auto;
+            margin-top: 10px;
+            padding-top: 10px;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CMS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="addCustomer.html">Add new Customer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customerList.html">Customer List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       
+      <div style="text-align: center;">
+        <h1>Login page</h1>
+      </div>
+      <div class="login">
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="staticEmail" placeholder="login id" >
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword" placeholder="password">
+            </div>
+          </div>
+          <div class=" pl-20px mb-3 flex-end d-grid gap-2 d-md-block" style="margin-left: 180px;">
+            <button class="btn btn-primary" type="button" onclick="addCustomer()">Submit</button>
+          </div>
+      </div>
+     
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    function addCustomer()
+    {
+
+        let loginId = document.getElementById("staticEmail").value;
+        let password = document.getElementById("inputPassword").value;
+
+        let details = {
+            login_id:loginId,
+            password:password
+        }
+        
+        alert("customer added");
+    }
+</script>
