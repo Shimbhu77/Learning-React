@@ -64,17 +64,74 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script>
-    function addCustomer()
+  //  async function addCustomer() {
+  //     let loginId = document.getElementById("staticEmail").value;
+  //     let password = document.getElementById("inputPassword").value;
+
+  //     let requestBody = {
+  //       login_id: loginId,
+  //       password: password
+  //     };
+  //     console.log(requestBody);
+
+  //     const url = "https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp";
+
+  //     try {
+  //       const response = await fetch(url, {
+  //         method: 'POST',
+          
+  //         headers: {
+  //           'Content-Type': 'application/json'
+  //         },
+  //         body: JSON.stringify(requestBody)
+  //       });
+
+  //       // Response will be opaque in 'no-cors' mode, so you can't access response data
+  //       // You can still check if the request was successful and show the alert
+  //       console.log(response);
+  //       if (response.ok) {
+  //         console.log(response);
+  //         alert("Login successful");
+  //         const data = await response.json();
+  //         console.log(data);
+  //         console.log(data.access_token);
+  //       } else {
+  //         alert("Login failed");
+  //       }
+  //     } catch (error) {
+  //       console.error('Error:', error);
+  //     }
+  //  }
+
+  function addCustomer()
     {
 
         let loginId = document.getElementById("staticEmail").value;
         let password = document.getElementById("inputPassword").value;
 
-        let details = {
+        let requestBody = {
             login_id:loginId,
             password:password
         }
+        console.log(requestBody);
+        const url = "https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp";
+        fetch(url, {
+            method: 'POST',
+            
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody) 
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data); 
+            })
+            .catch(error => {
+              console.error('Error:', error);
+        });
         
-        alert("customer added");
+        alert("login successful");                    
     }
+
 </script>
