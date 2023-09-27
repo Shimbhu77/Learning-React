@@ -6,8 +6,6 @@
 # Machine doing learning graph, Deep Learning, Computer Vision
 # Data structures and Algorithms
 # Tailwind CSS , Material UI, Chakra UI 
-
-
 # DATA Science and Computational Data Science
 
 # ML/AI, Data Science, HLD and LLD
