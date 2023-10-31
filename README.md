@@ -3,3 +3,12 @@
 # ML Roadmap
 # Machine doing learning graph, Deep Learning, Computer Vision
 # Data structures and Algorithms
+# Tailwind CSS , Material UI, Chakra UI 
+# DATA Science and Computational Data Science
+# ML/AI, Data Science, HLD and LLD
+# Spring Core, Spring Boot
+# Angular Learning Started
+# Flutter App Development Learning
+# Restart Angular, Flutter
+
+
