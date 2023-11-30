@@ -38,34 +38,19 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:OutlinedButton(
-        child: Text("outlined Watch Here!"),
-        onPressed: (){
-          print("Start Playing Song in outlined.");
-        },
-        onLongPress: (){
-          print("Select Delete Items in outlined");
-        },
+      // body:Center(
+      //   child:Image.asset('assets/images/Shimbhu AI logo.png'),
+      //   )
+      //  body:Image.asset('assets/images/Shimbhu AI logo.png'),
+        body:Center(
+          child: Container(
+            width: 400,
+            height: 400,
+            color:Colors.lightBlueAccent,
+            child:Image.asset('assets/images/Shimbhu AI logo.png'),
+          ),
+       
         )
-      //  body:ElevatedButton(
-      //   child: Text("Elevated Watch Here!"),
-      //   onPressed: (){
-      //     print("Start Playing Song in Elevated.");
-      //   },
-      //   onLongPress: (){
-      //     print("Select Delete Items in Elevated");
-      //   },
-      //   )
-      // body:TextButton(
-      //   child: Text("Watch Here!"),
-      //   onPressed: (){
-      //     print("Start Playing Song.");
-      //   },
-      //   onLongPress: (){
-      //     print("Select Delete Items");
-      //   },
-      //   )
-     
       
     );
   }
