@@ -38,19 +38,42 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      // body:Center(
-      //   child:Image.asset('assets/images/Shimbhu AI logo.png'),
-      //   )
-      //  body:Image.asset('assets/images/Shimbhu AI logo.png'),
-        body:Center(
-          child: Container(
-            width: 400,
-            height: 400,
-            color:Colors.lightBlueAccent,
-            child:Image.asset('assets/images/Shimbhu AI logo.png'),
-          ),
-       
-        )
+      //Row
+      // body: Container(
+      //    height: 300,
+      //    width: 400,
+      //    child: const Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //     crossAxisAlignment: CrossAxisAlignment.end,
+      //     children: [
+      //       Text("A",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       Text("B",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       Text("C",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       Text("D",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       Text("E",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       Text("F",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+      //       ]
+      //     ),
+      // ),
+
+       body: Center(
+         child: Container(
+          //  height: 300,
+          //  width: 400,
+           child: const Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text("A",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              Text("B",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              Text("C",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              Text("D",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              Text("E",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              Text("F",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+              ]
+            ),
+             ),
+       ),
       
     );
   }
