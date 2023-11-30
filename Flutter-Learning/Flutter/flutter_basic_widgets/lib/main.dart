@@ -38,16 +38,33 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:Center(
-        child: Container(
-        width: 400,
-        height: 400,
-        color: Colors.blueAccent,
-        child:const Center(
-          child: Text("Hello Shimbhu!",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 20)),
-          ),
-        ),
-        ),
+      body:OutlinedButton(
+        child: Text("outlined Watch Here!"),
+        onPressed: (){
+          print("Start Playing Song in outlined.");
+        },
+        onLongPress: (){
+          print("Select Delete Items in outlined");
+        },
+        )
+      //  body:ElevatedButton(
+      //   child: Text("Elevated Watch Here!"),
+      //   onPressed: (){
+      //     print("Start Playing Song in Elevated.");
+      //   },
+      //   onLongPress: (){
+      //     print("Select Delete Items in Elevated");
+      //   },
+      //   )
+      // body:TextButton(
+      //   child: Text("Watch Here!"),
+      //   onPressed: (){
+      //     print("Start Playing Song.");
+      //   },
+      //   onLongPress: (){
+      //     print("Select Delete Items");
+      //   },
+      //   )
      
       
     );
