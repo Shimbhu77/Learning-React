@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,25 +55,30 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ),
       // ),
 
-       body: Center(
-         child: Container(
-          //  height: 300,
-          //  width: 400,
-           child: const Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text("A",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              Text("B",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              Text("C",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              Text("D",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              Text("E",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              Text("F",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
-              ]
-            ),
-             ),
-       ),
-      
+      body: Center(
+          child: InkWell(
+              onTap: () {
+                print("clicked on container.");
+              },
+              onDoubleTap: () {
+                print("double clicked on container.");
+              },
+              onLongPress: () {
+                print(" long press clicked on container.");
+              },
+              child: Container(
+                  height: 300,
+                  width: 400,
+                  color: Colors.amber,
+                  child: Center(
+                    child: InkWell(
+                        onTap: () {
+                          print("clicked on Text!");
+                        },
+                        child: const Text("Click Me!",
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold))),
+                  )))),
     );
   }
 }
