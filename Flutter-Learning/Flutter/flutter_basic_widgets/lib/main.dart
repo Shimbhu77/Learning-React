@@ -36,7 +36,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
-      ),
+      ), 
+      
       //Row
       // body: Container(
       //    height: 300,
@@ -55,30 +56,61 @@ class _MyHomePageState extends State<MyHomePage> {
       //     ),
       // ),
 
-      body: Center(
-          child: InkWell(
-              onTap: () {
-                print("clicked on container.");
-              },
-              onDoubleTap: () {
-                print("double clicked on container.");
-              },
-              onLongPress: () {
-                print(" long press clicked on container.");
-              },
-              child: Container(
-                  height: 300,
-                  width: 400,
-                  color: Colors.amber,
-                  child: Center(
-                    child: InkWell(
-                        onTap: () {
-                          print("clicked on Text!");
-                        },
-                        child: const Text("Click Me!",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold))),
-                  )))),
+    //   body: Center(
+    //       child: InkWell(
+    //           onTap: () {
+    //             print("clicked on container.");
+    //           },
+    //           onDoubleTap: () {
+    //             print("double clicked on container.");
+    //           },
+    //           onLongPress: () {
+    //             print(" long press clicked on container.");
+    //           },
+    //           child: Container(
+    //               height: 300,
+    //               width: 400,
+    //               color: Colors.amber,
+    //               child: Center(
+    //                 child: InkWell(
+    //                     onTap: () {
+    //                       print("clicked on Text!");
+    //                     },
+    //                     child: const Text("Click Me!",
+    //                         style: TextStyle(
+    //                             fontSize: 20, fontWeight: FontWeight.bold))),
+    //               )))),
+    // );
+     body: Padding(
+       padding: EdgeInsets.all(10),
+
+       child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+         child: Row(
+           children: [
+                    Container(width: 400,height: 400,color: Colors.cyan,margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 167, 188, 190),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 212, 0, 145),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 35, 0, 212),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 212, 0, 92),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 57, 212, 0),margin: EdgeInsets.all(10),),
+             SingleChildScrollView(
+               child: Column(
+                  children: [
+                    Container(width: 400,height: 400,color: Colors.cyan,margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 167, 188, 190),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 212, 0, 145),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 35, 0, 212),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 212, 0, 92),margin: EdgeInsets.all(10),),
+                    Container(width: 400,height: 400,color: const Color.fromARGB(255, 57, 212, 0),margin: EdgeInsets.all(10),),
+                  ]
+               ),
+             ),
+           ],
+         ),
+       ),
+       
+     ),
     );
   }
 }
