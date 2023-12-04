@@ -77,6 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+    var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -87,39 +89,16 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: ListView(
-        scrollDirection: Axis.horizontal,
-        reverse: true,
-        children: [
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("One",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
 
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Two",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
+      
+      body: ListView.builder(itemBuilder: (context, index) {
+        return Text(arrNames[index],style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blue),);
+      },
+      itemCount: arrNames.length,
+      itemExtent: 100,
+      scrollDirection: Axis.horizontal,
+      )
 
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Three",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
-
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Four",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
-
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Five",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
-
-          Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Six",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
-
-           Padding(padding: const EdgeInsets.all(10.0),
-           child: const Text("Seven",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          ),
-          
-        ],)
       );
   }
 }
