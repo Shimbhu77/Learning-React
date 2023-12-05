@@ -91,22 +91,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       
-      // body:Row(children: [
+      body:Row(children: [
+        Expanded(flex:2,child: Container(width: 200,height: 200,color: Colors.blueAccent)),
+        Expanded(flex:4,child: Container(width: 200,height: 200,color: Colors.red)),
+        Expanded(flex:2,child: Container(width: 200,height: 200,color: Colors.orange)),
+        Expanded(flex:1,child: Container(width: 200,height: 200,color: Colors.green)),
+        Expanded(flex:1,child: Container(width: 200,height: 200,color: Colors.yellow)),
+
+      ],)
+
+      // body : Column(children: [
       //   Expanded(child: Container(width: 200,height: 200,color: Colors.blueAccent)),
       //   Expanded(child: Container(width: 200,height: 200,color: Colors.red)),
       //   Expanded(child: Container(width: 200,height: 200,color: Colors.orange)),
       //   Expanded(child: Container(width: 200,height: 200,color: Colors.green)),
       //   Expanded(child: Container(width: 200,height: 200,color: Colors.yellow)),
-
       // ],)
-
-      body : Column(children: [
-        Expanded(child: Container(width: 200,height: 200,color: Colors.blueAccent)),
-        Expanded(child: Container(width: 200,height: 200,color: Colors.red)),
-        Expanded(child: Container(width: 200,height: 200,color: Colors.orange)),
-        Expanded(child: Container(width: 200,height: 200,color: Colors.green)),
-        Expanded(child: Container(width: 200,height: 200,color: Colors.yellow)),
-      ],)
 
       );
   }
