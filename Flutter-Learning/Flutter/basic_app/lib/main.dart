@@ -91,19 +91,23 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       
-      body:ListView.separated(itemBuilder: (context,index){
-          return ListTile(
-            leading: Text('${index+1}'),
-            title: Text(arrNames[index]),
-            subtitle:Text("I am Number."),
-            trailing:Icon(Icons.add),
-            tileColor: Colors.cyan,
-          );
-      }, 
-       itemCount: arrNames.length,
-      separatorBuilder: (context,index){
-        return Divider(height: 100,thickness: 10,);
-      },),
+      // body:Center(
+      //   child: CircleAvatar(
+      //     child: Container(
+      //       width: 400,
+      //       height: 400,
+      //       color: Colors.cyan,),
+            
+      //   )
+      // ,)
+
+      body:Center(
+        child: CircleAvatar(
+          child: Text("SK",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
+          backgroundColor: Colors.blue,
+          radius: 40,
+        )
+      ,)
 
     
 
