@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
-    // var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
+    var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -91,15 +91,19 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       
-      body:Container(
-        color: Colors.cyan,
-        margin: const EdgeInsets.all(40),
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: const Text("Payal",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.purple)
-          ,),
-        )
-        ,)
+      body:ListView.separated(itemBuilder: (context,index){
+          return ListTile(
+            leading: Text('${index+1}'),
+            title: Text(arrNames[index]),
+            subtitle:Text("I am Number."),
+            trailing:Icon(Icons.add),
+            tileColor: Colors.cyan,
+          );
+      }, 
+       itemCount: arrNames.length,
+      separatorBuilder: (context,index){
+        return Divider(height: 100,thickness: 10,);
+      },),
 
     
 
