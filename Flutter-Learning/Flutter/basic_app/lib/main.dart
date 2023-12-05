@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Shimbhu'),
     );
   }
 }
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
-    var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
+    // var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
     return Scaffold(
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
@@ -91,15 +91,34 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       
-      body: ListView.separated(itemBuilder: (context, index) {
-        return Text(arrNames[index],style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.blue),);
-      },
-      itemCount: arrNames.length,
-      separatorBuilder: (context,index){
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.greenAccent,
+        child: Center(
+          child: Container(
+            width: 400,
+            height: 400,
+            
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(50),
+              border: Border.all(
+                width:10,
+                color: Colors.purple,
+              ),
+              boxShadow: [BoxShadow(
+                blurRadius: 500,
+                color: Colors.yellow,
+                spreadRadius: 300
+              )]
+            ),
 
-        return Divider(height: 10,thickness: 10,);
-      },
-      // scrollDirection: Axis.horizontal,
+            
+
+            child: Center(child: Text("Shimbhu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),)),
+          ),
+        ),
       )
 
       );
