@@ -91,35 +91,22 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
 
       
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: Colors.greenAccent,
-        child: Center(
-          child: Container(
-            width: 400,
-            height: 400,
-            
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(
-                width:10,
-                color: Colors.purple,
-              ),
-              boxShadow: [BoxShadow(
-                blurRadius: 500,
-                color: Colors.yellow,
-                spreadRadius: 300
-              )]
-            ),
+      // body:Row(children: [
+      //   Expanded(child: Container(width: 200,height: 200,color: Colors.blueAccent)),
+      //   Expanded(child: Container(width: 200,height: 200,color: Colors.red)),
+      //   Expanded(child: Container(width: 200,height: 200,color: Colors.orange)),
+      //   Expanded(child: Container(width: 200,height: 200,color: Colors.green)),
+      //   Expanded(child: Container(width: 200,height: 200,color: Colors.yellow)),
 
-            
+      // ],)
 
-            child: Center(child: Text("Shimbhu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),)),
-          ),
-        ),
-      )
+      body : Column(children: [
+        Expanded(child: Container(width: 200,height: 200,color: Colors.blueAccent)),
+        Expanded(child: Container(width: 200,height: 200,color: Colors.red)),
+        Expanded(child: Container(width: 200,height: 200,color: Colors.orange)),
+        Expanded(child: Container(width: 200,height: 200,color: Colors.green)),
+        Expanded(child: Container(width: 200,height: 200,color: Colors.yellow)),
+      ],)
 
       );
   }
