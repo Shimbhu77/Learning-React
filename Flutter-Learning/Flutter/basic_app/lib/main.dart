@@ -75,6 +75,18 @@ class _MyHomePageState extends State<MyHomePage> {
     var time = DateTime.now();
 
     var arrNames = ["Ram", "Payal", "Radhika", "Swati", "Yashtika", "Saika"];
+    var colors = [
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
+    ];
     return Scaffold(
         appBar: AppBar(
           // TRY THIS: Try changing the color here to a specific color (to
@@ -222,42 +234,90 @@ class _MyHomePageState extends State<MyHomePage> {
         //       ]
         //       )
         //   ,)),
-        body: Center(
-          child: Container(
-            width: 600,
-            height: 600,
-            color: Colors.lightBlue,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () async{
-                 DateTime? datepicked = await showDatePicker(
-                  context: context, 
-                  initialDate: DateTime.now(), 
-                  firstDate: DateTime(2020), 
-                  lastDate: DateTime(2024));
-                  if(datepicked!=null)
-                  {
-                    print("Selected Date : $datepicked");
-                  }
-                },
-                 child: Text("Select Date")),
+        // body: Center(
+        //   child: Container(
+        //     width: 600,
+        //     height: 600,
+        //     color: Colors.lightBlue,
+        //     child: Column(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       crossAxisAlignment: CrossAxisAlignment.center,
+        //       children: [
+        //         ElevatedButton(
+        //           onPressed: () async{
+        //          DateTime? datepicked = await showDatePicker(
+        //           context: context, 
+        //           initialDate: DateTime.now(), 
+        //           firstDate: DateTime(2020), 
+        //           lastDate: DateTime(2024));
+        //           if(datepicked!=null)
+        //           {
+        //             print("Selected Date : $datepicked");
+        //           }
+        //         },
+        //          child: Text("Select Date")),
 
-                 ElevatedButton(
-                  onPressed: () async{
-                  TimeOfDay? timepicked = await showTimePicker(context: context, initialTime: TimeOfDay.now(),initialEntryMode: TimePickerEntryMode.input);
+        //          ElevatedButton(
+        //           onPressed: () async{
+        //           TimeOfDay? timepicked = await showTimePicker(context: context, initialTime: TimeOfDay.now(),initialEntryMode: TimePickerEntryMode.input);
 
-                  if(timepicked!=null)
-                  {
-                    print("Selected Time : ${timepicked.hour} : ${timepicked.minute}");
-                  }
-                },
-                 child: Text("Select Time")), 
-              ]
-              )
-          ,)),
+        //           if(timepicked!=null)
+        //           {
+        //             print("Selected Time : ${timepicked.hour} : ${timepicked.minute}");
+        //           }
+        //         },
+        //          child: Text("Select Time")), 
+        //       ]
+        //       )
+        //   ,)),
+
+        // body:GridView.count(crossAxisCount: 4,
+        // crossAxisSpacing: 10,
+        // mainAxisSpacing: 10,
+        // children: [
+        //   Container(color: colors[0],),
+        //   Container(color: colors[1],),
+        //   Container(color: colors[2],),
+        //   Container(color: colors[3],),
+        //   Container(color: colors[4],),
+        //   Container(color: colors[5],),
+        //   Container(color: colors[6],),
+        //   Container(color: colors[7],),
+        //   Container(color: colors[8],),
+        //   Container(color: colors[9],),
+
+        // ],)
+
+        //  body:GridView.extent(maxCrossAxisExtent: 200,
+        // crossAxisSpacing: 10,
+        // mainAxisSpacing: 10,
+        // children: [
+        //   Container(color: colors[0],),
+        //   Container(color: colors[1],),
+        //   Container(color: colors[2],),
+        //   Container(color: colors[3],),
+        //   Container(color: colors[4],),
+        //   Container(color: colors[5],),
+        //   Container(color: colors[6],),
+        //   Container(color: colors[7],),
+        //   Container(color: colors[8],),
+        //   Container(color: colors[9],),
+
+        // ],)
+
+        //  body:GridView.builder(
+        //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,crossAxisSpacing: 20,mainAxisSpacing: 20),
+        //   itemCount: colors.length,
+        //   itemBuilder:(context,index){
+        //   return Container(color: colors[index],);
+        //  })
+
+         body:GridView.builder(
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200,crossAxisSpacing: 20,mainAxisSpacing: 20),
+          itemCount: colors.length,
+          itemBuilder:(context,index){
+          return Container(color: colors[index],);
+         })
         );
   }
 }
