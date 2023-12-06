@@ -69,6 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
+    var emailText = TextEditingController();
+    var passwordText = TextEditingController();
+
     var arrNames = ["Ram", "Payal", "Radhika", "Swati", "Yashtika", "Saika"];
     return Scaffold(
         appBar: AppBar(
@@ -116,19 +119,68 @@ class _MyHomePageState extends State<MyHomePage> {
         //   ),
         // ),
 
-        body: Center(
-          child: Card(
-            elevation: 30,
-            shadowColor: Colors.green,
-            child:Padding(
+        // body: Center(
+        //   child: Card(
+        //     elevation: 30,
+        //     shadowColor: Colors.green,
+        //     child:Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: Text(
+        //           "Shimbhu Kumawat",
+        //           style: Theme.of(context).textTheme.displayMedium,
+        //         ),
+        //     ),
+        //   ),
+        // ),
+
+        body:Column(
+          children: [
+            Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                  "Shimbhu Kumawat",
-                  style: Theme.of(context).textTheme.displayMedium,
+              child: TextField(
+                controller: emailText,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.yellow,width: 6),
+                  ),
+                  hintText: "Enter your Email.",
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.blue,width: 2),
+                  ),
+                  prefixIcon: Icon(Icons.email,color: Colors.blue,)
                 ),
+              ),
             ),
-          ),
-        ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                controller: passwordText,
+                obscureText: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                  borderSide: BorderSide(color: Colors.green,width: 6),
+                  ),
+                  hintText: "Enter your password.",
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(color: Colors.brown,width: 2),
+                  ),
+                   prefixIcon: Icon(Icons.password,color: Colors.blue,)
+                ),
+              ),
+            ),
+            ElevatedButton(onPressed: (){
+              var email = emailText.text;
+              var password = passwordText.text;
+               print("email : $email");
+                print("password : $password");
+            }, child: Text("Sign In"))
+          ],
+        )
         );
   }
 }
