@@ -78,39 +78,51 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
-    var arrNames = ["Ram","Payal","Radhika","Swati","Yashtika","Saika"];
+    var arrNames = ["Ram", "Payal", "Radhika", "Swati", "Yashtika", "Saika"];
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+        appBar: AppBar(
+          // TRY THIS: Try changing the color here to a specific color (to
+          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+          // change color while the other colors stay the same.
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
 
-      
-      // body:Center(
-      //   child: CircleAvatar(
-      //     child: Container(
-      //       width: 400,
-      //       height: 400,
-      //       color: Colors.cyan,),
-            
-      //   )
-      // ,)
+        // body:Center(
+        //   child: CircleAvatar(
+        //     child: Container(
+        //       width: 400,
+        //       height: 400,
+        //       color: Colors.cyan,),
 
-      body:Center(
-        child: CircleAvatar(
-          child: Text("SK",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
-          backgroundColor: Colors.blue,
-          radius: 40,
-        )
-      ,)
+        //   )
+        // ,)
 
-    
+        // body:Center(
+        //   child: CircleAvatar(
+        //     child: Text("SK",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),),
+        //     backgroundColor: Colors.blue,
+        //     radius: 40,
+        //   )
+        // ,)
 
-      );
+        // body:Center(child: Text("Shimbhu Kumawat",style: TextStyle(fontSize: 30,fontFamily: 'RubikFamily'),),)
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Shimbhu Kumawat",
+                style: TextStyle(fontSize: 30, fontFamily: 'RubikFamily',color: Colors.blue),
+              ),
+              Text(
+                "Payal Kumawat",
+                style: TextStyle(fontSize: 30, fontFamily: 'RubikFamily',color: Colors.pink),
+              )
+            ],
+          ),
+        ));
   }
 }
