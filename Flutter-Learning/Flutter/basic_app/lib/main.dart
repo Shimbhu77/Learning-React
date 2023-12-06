@@ -202,6 +202,26 @@ class _MyHomePageState extends State<MyHomePage> {
         //       ]
         //       )
         //   ,)),
+        // body: Center(
+        //   child: Container(
+        //     width: 600,
+        //     height: 600,
+        //     color: Colors.lightBlue,
+        //     child: Column(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       crossAxisAlignment: CrossAxisAlignment.center,
+        //       children: [
+        //         Text("Current Time : ${DateFormat("Hms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        //         Text("Current Time : ${DateFormat("jms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        //         Text("Current Date : ${DateFormat("yMMMMd").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        //         ElevatedButton(onPressed: (){
+        //         setState(() {
+                  
+        //         });
+        //         }, child: Text("Get Current Time")),
+        //       ]
+        //       )
+        //   ,)),
         body: Center(
           child: Container(
             width: 600,
@@ -211,14 +231,30 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Current Time : ${DateFormat("Hms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                Text("Current Time : ${DateFormat("jms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                Text("Current Date : ${DateFormat("yMMMMd").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                ElevatedButton(onPressed: (){
-                setState(() {
-                  
-                });
-                }, child: Text("Get Current Time")),
+                ElevatedButton(
+                  onPressed: () async{
+                 DateTime? datepicked = await showDatePicker(
+                  context: context, 
+                  initialDate: DateTime.now(), 
+                  firstDate: DateTime(2020), 
+                  lastDate: DateTime(2024));
+                  if(datepicked!=null)
+                  {
+                    print("Selected Date : $datepicked");
+                  }
+                },
+                 child: Text("Select Date")),
+
+                 ElevatedButton(
+                  onPressed: () async{
+                  TimeOfDay? timepicked = await showTimePicker(context: context, initialTime: TimeOfDay.now(),initialEntryMode: TimePickerEntryMode.input);
+
+                  if(timepicked!=null)
+                  {
+                    print("Selected Time : ${timepicked.hour} : ${timepicked.minute}");
+                  }
+                },
+                 child: Text("Select Time")), 
               ]
               )
           ,)),
