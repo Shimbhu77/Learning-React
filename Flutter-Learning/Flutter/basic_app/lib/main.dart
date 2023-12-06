@@ -100,20 +100,35 @@ class _MyHomePageState extends State<MyHomePage> {
         // ,)
 
         // body:Center(child: Text("Shimbhu Kumawat",style: TextStyle(fontSize: 30,fontFamily: 'RubikFamily'),),)
+        // body: Center(
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Text(
+        //         "Shimbhu Kumawat",
+        //         style: Theme.of(context).textTheme.displayMedium,
+        //       ),
+        //       Text(
+        //         "Payal Kumawat",
+        //         style: Theme.of(context).textTheme.titleSmall,
+        //       )
+        //     ],
+        //   ),
+        // ),
+
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Shimbhu Kumawat",
-                style: Theme.of(context).textTheme.displayMedium,
-              ),
-              Text(
-                "Payal Kumawat",
-                style: Theme.of(context).textTheme.titleSmall,
-              )
-            ],
+          child: Card(
+            elevation: 30,
+            shadowColor: Colors.green,
+            child:Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                  "Shimbhu Kumawat",
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+            ),
           ),
-        ));
+        ),
+        );
   }
 }
