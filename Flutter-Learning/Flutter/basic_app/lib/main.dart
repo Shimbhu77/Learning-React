@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const MyApp());
@@ -183,16 +184,36 @@ class _MyHomePageState extends State<MyHomePage> {
         //   ],
         // )
 
+        // body: Center(
+        //   child: Container(
+        //     width: 400,
+        //     height: 400,
+        //     color: Colors.lightBlue,
+        //     child: Column(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       crossAxisAlignment: CrossAxisAlignment.center,
+        //       children: [
+        //         Text("Current Time : $time ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        //         ElevatedButton(onPressed: (){
+        //         setState(() {
+                  
+        //         });
+        //         }, child: Text("Get Current Time")),
+        //       ]
+        //       )
+        //   ,)),
         body: Center(
           child: Container(
-            width: 400,
-            height: 400,
+            width: 600,
+            height: 600,
             color: Colors.lightBlue,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Current Time : $time ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                Text("Current Time : ${DateFormat("Hms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                Text("Current Time : ${DateFormat("jms").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                Text("Current Date : ${DateFormat("yMMMMd").format(time)} ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
                 ElevatedButton(onPressed: (){
                 setState(() {
                   
