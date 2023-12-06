@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     var emailText = TextEditingController();
     var passwordText = TextEditingController();
+    var time = DateTime.now();
 
     var arrNames = ["Ram", "Payal", "Radhika", "Swati", "Yashtika", "Saika"];
     return Scaffold(
@@ -133,54 +134,73 @@ class _MyHomePageState extends State<MyHomePage> {
         //   ),
         // ),
 
-        body:Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                controller: emailText,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Colors.yellow,width: 6),
-                  ),
-                  hintText: "Enter your Email.",
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.blue,width: 2),
-                  ),
-                  prefixIcon: Icon(Icons.email,color: Colors.blue,)
-                ),
-              ),
-            ),
+        // body:Column(
+        //   children: [
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: TextField(
+        //         controller: emailText,
+        //         decoration: InputDecoration(
+        //           border: OutlineInputBorder(
+        //           borderRadius: BorderRadius.circular(20),
+        //           borderSide: BorderSide(color: Colors.yellow,width: 6),
+        //           ),
+        //           hintText: "Enter your Email.",
+        //           focusedBorder: OutlineInputBorder(
+        //             borderRadius: BorderRadius.circular(20),
+        //             borderSide: BorderSide(color: Colors.blue,width: 2),
+        //           ),
+        //           prefixIcon: Icon(Icons.email,color: Colors.blue,)
+        //         ),
+        //       ),
+        //     ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                controller: passwordText,
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Colors.green,width: 6),
-                  ),
-                  hintText: "Enter your password.",
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.brown,width: 2),
-                  ),
-                   prefixIcon: Icon(Icons.password,color: Colors.blue,)
-                ),
-              ),
-            ),
-            ElevatedButton(onPressed: (){
-              var email = emailText.text;
-              var password = passwordText.text;
-               print("email : $email");
-                print("password : $password");
-            }, child: Text("Sign In"))
-          ],
-        )
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: TextField(
+        //         controller: passwordText,
+        //         obscureText: true,
+        //         decoration: InputDecoration(
+        //           border: OutlineInputBorder(
+        //           borderRadius: BorderRadius.circular(20),
+        //           borderSide: BorderSide(color: Colors.green,width: 6),
+        //           ),
+        //           hintText: "Enter your password.",
+        //           focusedBorder: OutlineInputBorder(
+        //             borderRadius: BorderRadius.circular(20),
+        //             borderSide: BorderSide(color: Colors.brown,width: 2),
+        //           ),
+        //            prefixIcon: Icon(Icons.password,color: Colors.blue,)
+        //         ),
+        //       ),
+        //     ),
+        //     ElevatedButton(onPressed: (){
+        //       var email = emailText.text;
+        //       var password = passwordText.text;
+        //        print("email : $email");
+        //         print("password : $password");
+        //     }, child: Text("Sign In"))
+        //   ],
+        // )
+
+        body: Center(
+          child: Container(
+            width: 400,
+            height: 400,
+            color: Colors.lightBlue,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("Current Time : $time ",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                ElevatedButton(onPressed: (){
+                setState(() {
+                  
+                });
+                }, child: Text("Get Current Time")),
+              ]
+              )
+          ,)),
         );
   }
 }
