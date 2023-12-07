@@ -87,6 +87,10 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.cyan,
       Colors.deepPurple,
     ];
+
+     callBackFun(){
+      print("Callback function called.");
+     }
     return Scaffold(
         appBar: AppBar(
           // TRY THIS: Try changing the color here to a specific color (to
@@ -312,12 +316,19 @@ class _MyHomePageState extends State<MyHomePage> {
         //   return Container(color: colors[index],);
         //  })
 
-         body:GridView.builder(
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200,crossAxisSpacing: 20,mainAxisSpacing: 20),
-          itemCount: colors.length,
-          itemBuilder:(context,index){
-          return Container(color: colors[index],);
-         })
+        //  body:GridView.builder(
+        //   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200,crossAxisSpacing: 20,mainAxisSpacing: 20),
+        //   itemCount: colors.length,
+        //   itemBuilder:(context,index){
+        //   return Container(color: colors[index],);
+        //  })
+
+        // Callback function
+
+        body: ElevatedButton(
+          child: Text("Press here!"),
+          onPressed: callBackFun,
+        ),
         );
   }
 }
