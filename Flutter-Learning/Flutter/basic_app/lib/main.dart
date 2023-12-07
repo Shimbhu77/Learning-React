@@ -1,3 +1,4 @@
+import 'package:basic_app/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:intl/intl.dart';
@@ -361,19 +362,52 @@ class _MyHomePageState extends State<MyHomePage> {
     //   ],
     // ),
 
-    body: Container(
-      width: 1000,
-      height: 1000,
-      color: Colors.green,
-      child: Stack(
-        children: [
-          Container(width: 400,height: 400,color: Colors.blue,child: Text("Shimbhu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),)),
-          Positioned(top: 50,left: 50,child: Container(width: 400,height: 400,color: Colors.purple,child: Text("Payal",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),))),
-          // Container(width: 200,height: 200,color: Colors.green,),
-        ],
-      ),
+    // body: Container(
+    //   width: 1000,
+    //   height: 1000,
+    //   color: Colors.green,
+    //   child: Stack(
+    //     children: [
+    //       Container(width: 400,height: 400,color: Colors.blue,child: Text("Shimbhu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),)),
+    //       Positioned(top: 50,left: 50,child: Container(width: 400,height: 400,color: Colors.purple,child: Text("Payal",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),))),
+    //       // Container(width: 200,height: 200,color: Colors.green,),
+    //     ],
+    //   ),
+    // ),
+
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 200,
+          height: 100,
+          child: RoundedButton(
+            btnName:"payal",
+            icon: Icon(Icons.lock),
+            callback: () {
+              print("button pressed.");
+            },
+            textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.brown),
+            color: Colors.yellow,
+            ),
+        ),
+        Container(height: 100,),
+        Container(
+          width: 200,
+          height: 100,
+          child: RoundedButton(
+            btnName:"Shimbhu",
+            icon: Icon(Icons.play_arrow),
+            callback: () {
+              print("button 2 pressed.");
+            },
+            textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),
+            color: Colors.lightBlue,
+            ),
+        ),
+      ],
     ),
-        );
+    );
   }
 }
 
