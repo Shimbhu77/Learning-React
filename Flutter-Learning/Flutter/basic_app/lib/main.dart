@@ -2,6 +2,7 @@ import 'package:basic_app/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:intl/intl.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -483,7 +484,13 @@ class _MyHomePageState extends State<MyHomePage> {
       //   TextSpan(text: "Shimbhu!",style: TextStyle(color: Colors.blue,fontSize: 40,fontStyle: FontStyle.italic))
       // ]),),
 
-      body: Center(child: Icon(Icons.spa,size: 200,color: Colors.purple,)),
+      // body: Center(child: Icon(Icons.spa,size: 200,color: Colors.purple,)),
+      body: Center(child: Column(
+        children: [
+          Icon(Icons.spa,size: 200,color: Colors.purple,),
+          FaIcon(FontAwesomeIcons.rupeeSign,size: 100,color:  Colors.purple,)
+        ],
+      )),
     );
   }
 }
