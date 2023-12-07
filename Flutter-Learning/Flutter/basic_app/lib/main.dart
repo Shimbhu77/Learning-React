@@ -86,6 +86,16 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.brown,
       Colors.cyan,
       Colors.deepPurple,
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
     ];
 
      callBackFun(){
@@ -325,10 +335,115 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Callback function
 
-        body: ElevatedButton(
-          child: Text("Press here!"),
-          onPressed: callBackFun,
-        ),
+        // body: ElevatedButton(
+        //   child: Text("Press here!"),
+        //   onPressed: callBackFun,
+        // ),
+
+
+        // Custom Widget
+
+       body: Column(
+  children: [
+    
+    horizontalScroll(),
+    VerticalScroll(),
+    Expanded(flex: 1, child: Container(color: Colors.purple)),
+    Expanded(flex: 3, child: Container(color: Colors.pink)),
+  ],
+),
+
+
         );
   }
 }
+
+class VerticalScroll extends StatelessWidget
+{
+  var colors = [
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
+    ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(flex: 2, child: Container(color: Colors.green,child: ListView.builder(
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: 100,
+                child: CircleAvatar(backgroundColor: colors[index]),
+              ),
+            );
+          },
+          itemCount: colors.length,
+          scrollDirection: Axis.vertical,
+        ),));
+  }
+
+}
+
+
+class horizontalScroll extends StatelessWidget
+{
+  var colors = [
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.purple,
+      Colors.orange,
+      Colors.pink,
+      Colors.brown,
+      Colors.cyan,
+      Colors.deepPurple,
+    ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(flex: 2, child: Container(color: Colors.cyan,child: ListView.builder(
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: 100,
+                child: CircleAvatar(backgroundColor: colors[index]),
+              ),
+            );
+          },
+          itemCount: colors.length,
+          scrollDirection: Axis.horizontal,
+        ),));
+  }
+
+}
+
