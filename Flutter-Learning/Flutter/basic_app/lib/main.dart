@@ -408,26 +408,72 @@ class _MyHomePageState extends State<MyHomePage> {
 //       ],
 //     ),
 
-        body:Container(
-          color: Colors.grey,
-          child: Wrap(
-              direction: Axis.horizontal,
-              alignment: WrapAlignment.spaceEvenly,
-              spacing: 20,
-              runSpacing: 50,
-              children: [
-                Container(width: 200,height: 200,color: colors[0],),
-                Container(width: 200,height: 200,color: colors[1],),
-                Container(width: 200,height: 200,color: colors[2],),
-                Container(width: 200,height: 200,color: colors[3],),
-                Container(width: 200,height: 200,color: colors[4],),
-                Container(width: 200,height: 200,color: colors[5],),
-                Container(width: 200,height: 200,color: colors[6],),
-                Container(width: 200,height: 200,color: colors[7],),
-                Container(width: 200,height: 200,color: colors[8],),
-                Container(width: 200,height: 200,color: colors[9],),
-              ],
-            ),
+        // body:Container(
+        //   color: Colors.grey,
+        //   child: Wrap(
+        //       direction: Axis.horizontal,
+        //       alignment: WrapAlignment.spaceEvenly,
+        //       spacing: 20,
+        //       runSpacing: 50,
+        //       children: [
+        //         Container(width: 200,height: 200,color: colors[0],),
+        //         Container(width: 200,height: 200,color: colors[1],),
+        //         Container(width: 200,height: 200,color: colors[2],),
+        //         Container(width: 200,height: 200,color: colors[3],),
+        //         Container(width: 200,height: 200,color: colors[4],),
+        //         Container(width: 200,height: 200,color: colors[5],),
+        //         Container(width: 200,height: 200,color: colors[6],),
+        //         Container(width: 200,height: 200,color: colors[7],),
+        //         Container(width: 200,height: 200,color: colors[8],),
+        //         Container(width: 200,height: 200,color: colors[9],),
+        //       ],
+        //     ),
+        // ),
+
+
+      // body: Center(
+        
+      //   child:ConstrainedBox
+      //   (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
+      //   child: SizedBox(width:200,height: 50,
+      //   child: ElevatedButton(onPressed: (){
+
+      //   },
+      //   child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
+      //   ),),)
+      //   ),  
+
+      // body: Center(
+      //   child:ConstrainedBox
+      //   (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
+      //   child: SizedBox.expand(
+      //   child: ElevatedButton(onPressed: (){
+
+      //   },
+      //   child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
+      //   ),),)
+      //   ),
+
+      // body: Center(
+      //   child:ConstrainedBox
+      //   (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
+      //   child: SizedBox.shrink(
+      //   child: ElevatedButton(onPressed: (){
+
+      //   },
+      //   child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
+      //   ),),)
+      //   ),
+
+      body: Center(
+        child:ConstrainedBox
+        (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
+        child: SizedBox.square(dimension: 200,
+        child: ElevatedButton(onPressed: (){
+
+        },
+        child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
+        ),),)
         ),
     );
   }
