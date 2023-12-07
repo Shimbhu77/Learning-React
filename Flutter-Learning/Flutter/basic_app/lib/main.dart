@@ -465,16 +465,23 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ),),)
       //   ),
 
-      body: Center(
-        child:ConstrainedBox
-        (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
-        child: SizedBox.square(dimension: 200,
-        child: ElevatedButton(onPressed: (){
+      // body: Center(
+      //   child:ConstrainedBox
+      //   (constraints: BoxConstraints(maxHeight: 500,maxWidth: 800,minHeight: 100,minWidth: 300),
+      //   child: SizedBox.square(dimension: 200,
+      //   child: ElevatedButton(onPressed: (){
 
-        },
-        child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
-        ),),)
-        ),
+      //   },
+      //   child: Text("ShimbhuAI",style: TextStyle(color: Colors.purple,fontSize: 40),),
+      //   ),),)
+      //   ),
+
+      body: RichText(text: TextSpan(style: TextStyle(color: Colors.green,fontSize: 30),children: <TextSpan>[
+        TextSpan(text: "Hii "),
+        TextSpan(text: "Payal  ",style: TextStyle(color: Colors.purple,fontSize: 40,fontStyle: FontStyle.italic)),
+        TextSpan(text: "I'm "),
+        TextSpan(text: "Shimbhu!",style: TextStyle(color: Colors.blue,fontSize: 40,fontStyle: FontStyle.italic))
+      ]),),
     );
   }
 }
