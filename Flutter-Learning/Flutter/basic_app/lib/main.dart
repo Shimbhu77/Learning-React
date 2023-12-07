@@ -343,107 +343,126 @@ class _MyHomePageState extends State<MyHomePage> {
 
         // Custom Widget
 
-       body: Column(
-  children: [
+//        body: Column(
+//   children: [
     
-    horizontalScroll(),
-    VerticalScroll(),
-    Expanded(flex: 1, child: Container(color: Colors.purple)),
-    Expanded(flex: 3, child: Container(color: Colors.pink)),
-  ],
-),
+//     horizontalScroll(),
+//     VerticalScroll(),
+//     Expanded(flex: 1, child: Container(color: Colors.purple)),
+//     Expanded(flex: 3, child: Container(color: Colors.pink)),
+//   ],
+// ),
 
+    // body: Stack(
+    //   children: [
+    //     Container(width: 600,height: 600,color: Colors.blue,),
+    //     Container(width: 400,height: 400,color: Colors.purple,),
+    //     Container(width: 200,height: 200,color: Colors.green,),
+    //   ],
+    // ),
 
+    body: Container(
+      width: 1000,
+      height: 1000,
+      color: Colors.green,
+      child: Stack(
+        children: [
+          Container(width: 400,height: 400,color: Colors.blue,child: Text("Shimbhu",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),)),
+          Positioned(top: 50,left: 50,child: Container(width: 400,height: 400,color: Colors.purple,child: Text("Payal",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white),))),
+          // Container(width: 200,height: 200,color: Colors.green,),
+        ],
+      ),
+    ),
         );
   }
 }
 
-class VerticalScroll extends StatelessWidget
-{
-  var colors = [
-      Colors.red,
-      Colors.blue,
-      Colors.green,
-      Colors.yellow,
-      Colors.purple,
-      Colors.orange,
-      Colors.pink,
-      Colors.brown,
-      Colors.cyan,
-      Colors.deepPurple,
-      Colors.red,
-      Colors.blue,
-      Colors.green,
-      Colors.yellow,
-      Colors.purple,
-      Colors.orange,
-      Colors.pink,
-      Colors.brown,
-      Colors.cyan,
-      Colors.deepPurple,
-    ];
+// class VerticalScroll extends StatelessWidget
+// {
+//   var colors = [
+//       Colors.red,
+//       Colors.blue,
+//       Colors.green,
+//       Colors.yellow,
+//       Colors.purple,
+//       Colors.orange,
+//       Colors.pink,
+//       Colors.brown,
+//       Colors.cyan,
+//       Colors.deepPurple,
+//       Colors.red,
+//       Colors.blue,
+//       Colors.green,
+//       Colors.yellow,
+//       Colors.purple,
+//       Colors.orange,
+//       Colors.pink,
+//       Colors.brown,
+//       Colors.cyan,
+//       Colors.deepPurple,
+//     ];
 
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(flex: 2, child: Container(color: Colors.green,child: ListView.builder(
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                width: 100,
-                child: CircleAvatar(backgroundColor: colors[index]),
-              ),
-            );
-          },
-          itemCount: colors.length,
-          scrollDirection: Axis.vertical,
-        ),));
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(flex: 2, child: Container(color: Colors.green,child: ListView.builder(
+//           itemBuilder: (context, index) {
+//             return Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: SizedBox(
+//                 width: 100,
+//                 child: CircleAvatar(backgroundColor: colors[index]),
+//               ),
+//             );
+//           },
+//           itemCount: colors.length,
+//           scrollDirection: Axis.vertical,
+//         ),));
+//   }
 
-}
+// }
 
 
-class horizontalScroll extends StatelessWidget
-{
-  var colors = [
-      Colors.red,
-      Colors.blue,
-      Colors.green,
-      Colors.yellow,
-      Colors.purple,
-      Colors.orange,
-      Colors.pink,
-      Colors.brown,
-      Colors.cyan,
-      Colors.deepPurple,
-      Colors.red,
-      Colors.blue,
-      Colors.green,
-      Colors.yellow,
-      Colors.purple,
-      Colors.orange,
-      Colors.pink,
-      Colors.brown,
-      Colors.cyan,
-      Colors.deepPurple,
-    ];
+// class horizontalScroll extends StatelessWidget
+// {
+//   var colors = [
+//       Colors.red,
+//       Colors.blue,
+//       Colors.green,
+//       Colors.yellow,
+//       Colors.purple,
+//       Colors.orange,
+//       Colors.pink,
+//       Colors.brown,
+//       Colors.cyan,
+//       Colors.deepPurple,
+//       Colors.red,
+//       Colors.blue,
+//       Colors.green,
+//       Colors.yellow,
+//       Colors.purple,
+//       Colors.orange,
+//       Colors.pink,
+//       Colors.brown,
+//       Colors.cyan,
+//       Colors.deepPurple,
+//     ];
 
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(flex: 2, child: Container(color: Colors.cyan,child: ListView.builder(
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                width: 100,
-                child: CircleAvatar(backgroundColor: colors[index]),
-              ),
-            );
-          },
-          itemCount: colors.length,
-          scrollDirection: Axis.horizontal,
-        ),));
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(flex: 2, child: Container(color: Colors.cyan,child: ListView.builder(
+//           itemBuilder: (context, index) {
+//             return Padding(
+//               padding: const EdgeInsets.all(8.0),
+//               child: SizedBox(
+//                 width: 100,
+//                 child: CircleAvatar(backgroundColor: colors[index]),
+//               ),
+//             );
+//           },
+//           itemCount: colors.length,
+//           scrollDirection: Axis.horizontal,
+//         ),));
+//   }
 
-}
+// }
 
