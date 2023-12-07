@@ -485,12 +485,24 @@ class _MyHomePageState extends State<MyHomePage> {
       // ]),),
 
       // body: Center(child: Icon(Icons.spa,size: 200,color: Colors.purple,)),
-      body: Center(child: Column(
-        children: [
-          Icon(Icons.spa,size: 200,color: Colors.purple,),
-          FaIcon(FontAwesomeIcons.rupeeSign,size: 100,color:  Colors.purple,)
-        ],
-      )),
+      // body: Center(child: Column(
+      //   children: [
+      //     Icon(Icons.spa,size: 200,color: Colors.purple,),
+      //     FaIcon(FontAwesomeIcons.rupeeSign,size: 100,color:  Colors.purple,)
+      //   ],
+      // )),
+
+      body: Container(
+        width: double.infinity,
+        height: 400,
+        color: Colors.green,
+        child: Stack(
+          children: [
+            Positioned(bottom: 20,right: 100,child: Container(width: 100,height: 100,color: Colors.blue,)),
+            Positioned(top: 20,right: 100,child: Container(width: 100,height: 100,color: Colors.purple,)),
+          ],
+        ),
+      ),
     );
   }
 }
