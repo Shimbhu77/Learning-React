@@ -476,12 +476,14 @@ class _MyHomePageState extends State<MyHomePage> {
       //   ),),)
       //   ),
 
-      body: RichText(text: TextSpan(style: TextStyle(color: Colors.green,fontSize: 30),children: <TextSpan>[
-        TextSpan(text: "Hii "),
-        TextSpan(text: "Payal  ",style: TextStyle(color: Colors.purple,fontSize: 40,fontStyle: FontStyle.italic)),
-        TextSpan(text: "I'm "),
-        TextSpan(text: "Shimbhu!",style: TextStyle(color: Colors.blue,fontSize: 40,fontStyle: FontStyle.italic))
-      ]),),
+      // body: RichText(text: TextSpan(style: TextStyle(color: Colors.green,fontSize: 30),children: <TextSpan>[
+      //   TextSpan(text: "Hii "),
+      //   TextSpan(text: "Payal  ",style: TextStyle(color: Colors.purple,fontSize: 40,fontStyle: FontStyle.italic)),
+      //   TextSpan(text: "I'm "),
+      //   TextSpan(text: "Shimbhu!",style: TextStyle(color: Colors.blue,fontSize: 40,fontStyle: FontStyle.italic))
+      // ]),),
+
+      body: Center(child: Icon(Icons.spa,size: 200,color: Colors.purple,)),
     );
   }
 }
