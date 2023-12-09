@@ -1,3 +1,4 @@
+import 'package:animation_app/ClipRRectImage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Shimbhu's App",
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      home: ClipRRectImage(),
     );
   }
 }
