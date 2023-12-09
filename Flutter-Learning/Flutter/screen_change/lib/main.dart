@@ -21,9 +21,13 @@ class MyApp extends StatelessWidget
 
 class MyHomePage extends StatefulWidget
 {
+
+  var name;
+  MyHomePage(this.name);
+
   @override
   State<MyHomePage> createState() {
-    return  MyHomePageState();
+    return  MyHomePageState(name);
   }
   // @override
   // State<MyHomePage> createState(){
@@ -33,6 +37,9 @@ class MyHomePage extends StatefulWidget
 
 class MyHomePageState extends State<MyHomePage>
 {
+  var name;
+  MyHomePageState(this.name);
+
   @override
   Widget build(BuildContext context)
   {
@@ -41,7 +48,7 @@ class MyHomePageState extends State<MyHomePage>
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text("Welcome to Home Page.",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.purple.shade300),)),
+          Center(child: Text("Welcome Back $name",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.purple.shade300),)),
           SizedBox(height: 50,),
           ElevatedButton(style: ElevatedButton.styleFrom(fixedSize: Size(200,60)),onPressed: (){
           Navigator.push(context, MaterialPageRoute(builder: (context){
