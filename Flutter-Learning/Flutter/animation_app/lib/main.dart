@@ -1,5 +1,6 @@
 import 'package:animation_app/ClipRRectImage.dart';
 import 'package:animation_app/MapList.dart';
+import 'package:animation_app/SharedPref.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       // home: MyHomePage(),
       // home: ClipRRectImage(),
-      home: MapList(),
+      // home: MapList(),
+      home: SharedPref(),
     );
   }
 }
