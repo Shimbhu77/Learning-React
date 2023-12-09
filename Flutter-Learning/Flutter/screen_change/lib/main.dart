@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen_change/MyPage.dart';
+import 'package:screen_change/SplashPage.dart';
 
 void main(){
   return runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget
      return MaterialApp(
       title: "Shimbhu's App",
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyPage(),
+      home: SplashPage(),
      );
   }
 }
