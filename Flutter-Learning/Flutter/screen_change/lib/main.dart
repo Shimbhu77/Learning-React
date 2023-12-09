@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen_change/MyPage.dart';
+import 'package:screen_change/RangeSliderPage.dart';
 import 'package:screen_change/SplashPage.dart';
 
 void main(){
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget
      return MaterialApp(
       title: "Shimbhu's App",
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: SplashPage(),
+      // home: SplashPage(),
+      home: RangeSliderPage(),
      );
   }
 }
