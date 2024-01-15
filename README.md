@@ -12,6 +12,7 @@
 # Restart Angular, Flutter Started
 # React Native for Hybrid Apps
 # Flutter vs React Native
+# Devops vs MLops
 
 
 
