@@ -14,7 +14,9 @@
 # Flutter vs React Native
 # Devops vs MLops
 # Docker and Kubernetes
-# ML and its sub types
+# ML and its sub types   
+# DL and Computer Vision
+
 
 
 
