@@ -14,7 +14,7 @@
 # Flutter vs React Native
 # Devops vs MLops
 # Docker and Kubernetes
-# ML and its sub types and  new ML series Started
+# ML and its sub types and  new ML series Started Soon
 # DL and Computer Vision and NLP and GenAI and QML and QAI and QCV and SL and Something had to start and LeetCode
 
 
