@@ -16,7 +16,7 @@
 # Docker and Kubernetes
 # ML and its sub types and  new ML series Started Soon as Possible
 # DL and Computer Vision and NLP and GenAI and QML and QAI and QCV and SL and Something had to start and LeetCode
-# Leetcode challange started and Solved 112 Questions
+# Leetcode challange started and Solved 114 Questions
 
 
 
